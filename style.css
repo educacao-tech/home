@@ -1,0 +1,121 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #121212;
+    /* Fundo escuro */
+    color: #e0e0e0;
+    /* Texto claro */
+}
+
+header,
+footer {
+    background: #1e1e1e;
+    /* Um tom de escuro ligeiramente diferente */
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 1px solid #333;
+    /* Linha sutil de separação */
+}
+
+footer {
+    border-top: 1px solid #333;
+}
+
+nav a {
+    color: #fff;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    /* Transição suave na cor */
+}
+
+nav a:hover {
+    color: #007bff;
+    /* Cor de destaque no hover */
+    /* Efeito ao passar o mouse */
+}
+
+.carrossel {
+    background: #1e1e1e;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.carrossel img {
+    max-width: 90%;
+    /* Garante que a imagem não ultrapasse a largura da tela */
+    height: auto;
+    /* Mantém a proporção da imagem */
+    border-radius: 8px;
+}
+
+.destaques {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.servicos-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* Permite que os itens quebrem para a próxima linha */
+    gap: 20px;
+    /* Espaçamento entre os serviços */
+}
+
+.servico {
+    width: 300px;
+    background: #1e1e1e;
+    /* Fundo do card */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border-top: 4px solid #007bff;
+    /* Borda superior com cor de destaque */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Transição suave */
+}
+
+.servico:hover {
+    transform: translateY(-10px);
+    /* Efeito de flutuar */
+    box-shadow: 0 8px 16px rgba(0, 123, 255, 0.2);
+    /* Sombra azulada */
+}
+
+.servico-icone {
+    font-size: 2.5em;
+    /* Aumenta o tamanho do ícone */
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+.sobre,
+.depoimentos {
+    background-color: #181818;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+footer {
+    font-size: 0.9em;
+}
+
+/* Media Query para telas menores (ex: celulares) */
+@media (max-width: 768px) {
+    .servicos-container {
+        flex-direction: column;
+        /* Empilha os serviços verticalmente */
+        align-items: center;
+    }
+
+    .servico {
+        width: 90%;
+        /* Ocupa mais largura da tela */
+    }
+}
