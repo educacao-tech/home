@@ -1,0 +1,50 @@
+[
+    {
+        "published": true,
+        "imageUrl": "https://raw.githubusercontent.com/educacao-tech/imagem_noticia/cbd2b5a2f8dbe00860af794b266d3e445b1ed5a9/eptv-na-escola/eptv%20na%20escola.jpg",
+        "altText": "EMEB Esther Vianna Bologna é finalista do EPTV na Escola 2025 com projeto sustentável e criativo",
+        "link": "https://www.batatais.sp.gov.br/noticias/emeb-esther-vianna-bologna-e-finalista-do-eptv-na-escola-2025-com-projeto-sustentavel-e-criativo"
+    },
+    {
+        "published": true,
+        "imageUrl": "https://www.educadoraonline.com.br/site/wp-content/uploads/2025/09/CAPA-FS-30-09-2025-EPTV-555x312.jpg",
+        "altText": "Estudantes batataenses são destaques regional",
+        "link": "https://www.youtube.com/watch?v=w5A2DcF9NJc"
+    },
+    {
+        "published": true,
+        "imageUrl": "https://www.batatais.sp.gov.br/uploads/noticias/capa/medium/news_3586_570_370_202509221318008357940.png",
+        "altText": "Selo do prêmio Alfabetiza Juntos SP com fundo azul e texto em branco e amarelo.",
+        "link": "https://www.batatais.sp.gov.br/noticias/escola-municipal-de-batatais-recebe-premio-de-excelencia-educacional-do-governo-de-sp"
+    },
+    {
+        "published": true,
+        "imageUrl": "https://www.educadoraonline.com.br/site/wp-content/uploads/2025/09/CAPA-CTV-18-09-2025-ESCOLA-OURO-555x312.jpg",
+        "altText": "Entrevista para a TV Educadora",
+        "link": "https://youtu.be/tYN4T4dDICs"
+    },
+    {
+        "published": true,
+        "imageUrl": "https://www.batatais.sp.gov.br/uploads/noticias/capa/medium/news_3584_570_370_202509181022352136780.jpeg",
+        "altText": "Alunas da Ginástica Olímpica de Batatais conquistam pódios em competição na cidade de Bauru",
+        "link": "https://www.batatais.sp.gov.br/noticias/alunas-da-ginastica-olimpica-de-batatais-conquistam-podios-em-competicao-na-cidade-de-bauru"
+    },
+    {
+        "published": true,
+        "imageUrl": "https://www.batatais.sp.gov.br/uploads/noticias/capa/medium/news_3579_570_370_202509111355550177950.jpeg",
+        "altText": "Vagas em creches para 2026",
+        "link": "https://www.batatais.sp.gov.br/noticias/prefeitura-de-batatais-abre-inscricoes-para-vagas-em-creches-para-o-ano-de-2026"
+    },
+    {
+        "published": true,
+        "imageUrl": "https://www.batatais.sp.gov.br/uploads/noticias/capa/medium/news_3562_570_370_202508291036204614520.jpg",
+        "altText": "Concurso de leitura para alunos da rede municipal",
+        "link": "https://www.batatais.sp.gov.br/noticias/secretaria-de-educacao-lanca-o-concurso-de-leitura-para-alunos-da-rede-municipal"
+    },
+    {
+        "published": true,
+        "imageUrl": "https://www.batatais.sp.gov.br/uploads/noticias/capa/medium/news_3556_570_370_202508261815146082560.jpg",
+        "altText": "Semana Cultural e Literária movimenta escolas municipais de Batatais",
+        "link": "https://www.batatais.sp.gov.br/noticias/semana-cultural-e-literaria-movimenta-escolas-municipais-de-batatais"
+    }
+]

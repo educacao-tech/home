@@ -31,9 +31,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function autoContraste() {
         console.log('Função "autoContraste" foi chamada.');
-        // Exemplo de implementação:
+        // Adiciona ou remove a classe 'alto-contraste' do body
         document.body.classList.toggle('alto-contraste');
-        // Você precisaria definir a classe .alto-contraste no seu CSS.
     }
 
     function invertColors() {

@@ -7,7 +7,7 @@
     <meta name="author" content="3dots" />
     <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
     <title>Prefeitura de Batatais</title>
-    <meta name="description" content="Estância Turística de Batatais - Prefeitura de Batatais - Telefone: (16) 3660-3400" />
+    <meta name="description" content="Estância Turística de Batatais - Prefeitura de Batatais - Telefone: (16) 3761-7200" />
     <link href='https://www.batatais.sp.gov.br/view/images/favicon.ico' rel='shortcut' type='image/x-icon' />
     <link href='https://www.batatais.sp.gov.br/view/images/favicon.png' rel='icon' type='image/png' />
     <style type="text/css">
@@ -27,6 +27,38 @@
     <link rel="stylesheet" type="text/css" href="https://www.batatais.sp.gov.br/view/css/home.css?t=20251016081209" />
     <link rel="stylesheet" type="text/css" href="https://www.batatais.sp.gov.br/view/css/style.css?t=20251016081209" />
     <link rel="stylesheet" type="text/css" href="https://www.batatais.sp.gov.br/view/css/acessibilidade.css?t=20251016081209" />
+    <style>
+        .swiper-banner .swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .swiper-banner .swiper-slide img {
+            width: auto;
+            max-width: 100%;
+            max-height: 100%;
+        }
+        /* Estilos para o modo de Alto Contraste */
+        .alto-contraste {
+            background-color: #000 !important;
+            color: #FFF !important;
+        }
+        .alto-contraste a, .alto-contraste span, .alto-contraste h1, .alto-contraste h2, .alto-contraste h3, .alto-contraste h4, .alto-contraste h5, .alto-contraste h6 {
+            color: #FFF !important;
+        }
+        .alto-contraste .card, .alto-contraste .header, .alto-contraste .footer {
+            background-color: #111 !important;
+            border: 1px solid #FFF;
+        }
+        /* Classes para categorias de notícias */
+        .category-educacao { background-color: #7d52f1; color: #fff; }
+        .category-comunicacao { background-color: #cccccc; color: #353535; }
+        .category-meio-ambiente { background-color: #6daf74; color: black; }
+        /* ... outras categorias ... */
+        .about-section-bg {
+            background: url(https://www.batatais.sp.gov.br/uploads/institucional/historia/large/bg_home_1_1920_1420_202308231647142704090.jpg) fixed center;
+        }
+    </style>
 </head>
 <body id="home">
     <header class="header">
@@ -48,8 +80,8 @@
                     </div>
                 </div>
                 <div class="header-phone d-flex align-items-center gap-3 d-xl-none">
-                    <span>Fale com a Prefeitura:</span>
-                    <a href="tel:+551636603400">(16) 3660-3400</a>
+                    <span>Fale com a secretaria:</span>
+                    <a href="tel:+551637617200">(16) 3761-7200</a>
                 </div>
                 <ul class="nav d-none d-xl-flex align-items-xl-center gap-xl-2">
                     <li class="nav-item">
@@ -82,10 +114,10 @@
                     <span></span>
                 </button>
                 <div class="navbar-phone d-none d-xl-flex flex-xl-column align-items-xl-end lh-1">
-                    <span>Fale com a Prefeitura:</span>
-                    <a href="tel:+551636603400">
+                    <span>Fale com a secretaria:</span>
+                    <a href="tel:+551637617200">
                         <i class="bi bi-telephone"></i>
-                        (16) 3660-3400
+                        (16) 3761-7200
                     </a>
                 </div>
                 <form method="post" action="https://www.batatais.sp.gov.br/noticias" class="form-search">
@@ -215,102 +247,7 @@
         <section class="banner" id="banner">
             <div class="swiper swiper-banner">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <a href="https://www.batatais.sp.gov.br/noticias/prefeitura-de-batatais-adota-padrao-nacional-da-nota-fiscal-de-servicos-eletronica-a-partir-de-1%C2%BA-de-novembro" target="_blank">
-                            <picture>
-                                <source media="(min-width: 600px)" srcset="https://www.batatais.sp.gov.br/uploads/banners/large/banner_77_1920_500_202510141605501024440.jpg" />
-                                <img src="https://www.batatais.sp.gov.br/uploads/banners/large/banner_77_600_350_202510141605502462610.jpg" class="img-fluid" />
-                            </picture>
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="https://www.batatais.sp.gov.br/noticias/batatais-promove-acoes-do-outubro-rosa-com-foco-na-prevencao-e-diagnostico-precoce-do-cancer-de-mama" target="_blank">
-                            <picture>
-                                <source media="(min-width: 600px)" srcset="https://www.batatais.sp.gov.br/uploads/banners/large/banner_76_1920_500_202510091118150186730.jpg" />
-                                <img src="https://www.batatais.sp.gov.br/uploads/banners/large/banner_76_600_350_202510091118152337270.jpg" class="img-fluid" />
-                            </picture>
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="https://www.batatais.sp.gov.br/noticias/mais-limpa-mais-viva-mais-nossa-atitudes-que-transformam-batatais" target="_blank">
-                            <picture>
-                                <source media="(min-width: 600px)" srcset="https://www.batatais.sp.gov.br/uploads/banners/large/banner_74_1920_500_202509231358391381490.jpg" />
-                                <img src="https://www.batatais.sp.gov.br/uploads/banners/large/banner_74_600_350_202509231358393953000.jpg" class="img-fluid" />
-                            </picture>
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="https://www.batatais.sp.gov.br/noticias/prefeitura-alerta-populacao-sobre-riscos-de-incendios-e-baixa-umidade-do-ar" target="_blank">
-                            <picture>
-                                <source media="(min-width: 600px)" srcset="https://www.batatais.sp.gov.br/uploads/banners/large/banner_73_1920_500_202509111435387552590.jpg" />
-                                <img src="https://www.batatais.sp.gov.br/uploads/banners/large/banner_73_600_350_202509111435389890310.jpg" class="img-fluid" />
-                            </picture>
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="https://www.batatais.sp.gov.br/noticias/secretaria-de-cultura-e-turismo-de-batatais-organiza-agendamentos-para-visitas-ao-santuario-e-demais-pontos-turisticos" target="_blank">
-                            <picture>
-                                <source media="(min-width: 600px)" srcset="https://www.batatais.sp.gov.br/uploads/banners/large/banner_71_1920_500_202508210159311835670.jpg" />
-                                <img src="https://www.batatais.sp.gov.br/uploads/banners/large/banner_71_600_350_202508210159314122520.jpg" class="img-fluid" />
-                            </picture>
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="https://www.batatais.sp.gov.br/noticias/batatais-investe-em-esportes-para-todas-as-idades-e-transforma-vidas-por-meio-da-inclusao-e-do-bemestar" target="_blank">
-                            <picture>
-                                <source media="(min-width: 600px)" srcset="https://www.batatais.sp.gov.br/uploads/banners/large/banner_69_1920_500_202508071239413291500.jpg" />
-                                <img src="https://www.batatais.sp.gov.br/uploads/banners/large/banner_69_600_350_202508071239415468610.jpg" class="img-fluid" />
-                            </picture>
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="https://guia.destinosinteligentes.tur.br/totem/Batatais" target="_blank">
-                            <picture>
-                                <source media="(min-width: 600px)" srcset="https://www.batatais.sp.gov.br/uploads/banners/large/banner_68_1920_500_202508051644446690810.jpg" />
-                                <img src="https://www.batatais.sp.gov.br/uploads/banners/large/banner_68_600_350_202508051644448648740.jpg" class="img-fluid" />
-                            </picture>
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="https://www.batatais.sp.gov.br/noticias/menos-mosquitos-mais-saude-como-o-uso-de-armadilhas-em-batatais-impediu-19-mil-casos-de-dengue" target="_blank">
-                            <picture>
-                                <source media="(min-width: 600px)" srcset="https://www.batatais.sp.gov.br/uploads/banners/large/banner_66_1920_500_202507211558302555840.jpg" />
-                                <img src="https://www.batatais.sp.gov.br/uploads/banners/large/banner_66_600_350_202507211558305226730.jpg" class="img-fluid" />
-                            </picture>
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="https://www.batatais.sp.gov.br/noticias/projeto-wifi-nas-pracas-completa-um-mes-com-mais-de-7-mil-usuarios" target="_blank">
-                            <picture>
-                                <source media="(min-width: 600px)" srcset="https://www.batatais.sp.gov.br/uploads/banners/large/banner_58_1920_500_202504151542006914650.jpg" />
-                                <img src="https://www.batatais.sp.gov.br/uploads/banners/large/banner_58_600_350_202504151542008903900.jpg" class="img-fluid" />
-                            </picture>
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="https://www.batatais.sp.gov.br/noticias/att-o-destino-certo-para-seus-residuos-volumosos-%E2%80%93-contribua-para-uma-cidade-mais-limpa-e-saudavel" target="_blank">
-                            <picture>
-                                <source media="(min-width: 600px)" srcset="https://www.batatais.sp.gov.br/uploads/banners/large/banner_54_1920_500_202502121455311673830.jpg" />
-                                <img src="https://www.batatais.sp.gov.br/uploads/banners/large/banner_54_600_350_202502121455313863050.jpg" class="img-fluid" />
-                            </picture>
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="https://www.batatais.sp.gov.br/noticias/batatais-digital-a-prefeitura-de-batatais-coloca-servicos-na-palma-da-mao-do-cidadao" target="_blank">
-                            <picture>
-                                <source media="(min-width: 600px)" srcset="https://www.batatais.sp.gov.br/uploads/banners/large/banner_49_1920_500_202501271422439174800.jpg" />
-                                <img src="https://www.batatais.sp.gov.br/uploads/banners/large/banner_49_600_350_202501271422446348210.jpg" class="img-fluid" />
-                            </picture>
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="https://www.batatais.sp.gov.br/noticias/batatais-se-prepara-para-a-volta-as-aulas-com-novidades-e-investimentos-na-educacao" target="_blank">
-                            <picture>
-                                <source media="(min-width: 600px)" srcset="https://www.batatais.sp.gov.br/uploads/banners/large/banner_53_1920_500_202502031553513127830.jpg" />
-                                <img src="https://www.batatais.sp.gov.br/uploads/banners/large/banner_53_600_350_202502031553516229500.jpg" class="img-fluid" />
-                            </picture>
-                        </a>
-                    </div>
+                    <!-- Os slides do banner serão inseridos aqui dinamicamente -->
                 </div>
                 <div class="swiper-button-next d-none d-md-flex"></div>
                 <div class="swiper-button-prev d-none d-md-flex"></div>
@@ -387,117 +324,18 @@
                     <span>Notícias</span>
                 </h2>
                 <div class="content">
-                    <div class="card destaque" data-aos="fade-up" data-aos-delay="500" data-aos-duration="700">
-                        <img src="https://www.batatais.sp.gov.br/uploads/noticias/capa/medium/news_3617_570_370_202510151623100016390.jpg" class="card-img" alt="Reta final para participação no Concurso de Leitura – Elefante Letrado" />
-                        <div class="card-img-overlay">
-                            <span class="card-date">15/10/2025</span>
-                            <h5 class="card-title mb-0">Reta final para participação no Concurso de Leitura – Elefante Letrado</h5>
-                        </div>
-                        <a href="https://www.batatais.sp.gov.br/noticias/reta-final-para-participacao-no-concurso-de-leitura-–-elefante-letrado" class="stretched-link"></a>
-                    </div>
-                    <div class="card flex-row" data-aos="fade-up" data-aos-delay="500" data-aos-duration="700">
-                        <div class="card-image">
-                            <img src="https://www.batatais.sp.gov.br/uploads/noticias/capa/medium/news_3616_570_370_202510151616206335450.jpg" class="img-fluid" alt="Prefeitura lança projeto “Artesanato Criativo de Batatais” para impulsionar inovação e valorizar os artesãos locais" />
-                        </div>
-                        <div class="card-body">
-                            <span class="card-category" style="background-color:#cccccc;color:#353535;">Comunicação</span>
-                            <span class="card-date">15/10/2025</span>
-                            <h5 class="card-title">Prefeitura lança projeto “Artesanato Criativo de Batatais” para impulsionar inovação e valorizar os artesãos locais</h5>
-                            <h6 class="card-subtitle">A Prefeitura de Batatais, por meio das secretarias municipais de Desenvolvimento Econômico e Inovação e de Cultura e Turismo, em parceria com o Sebrae, lança no dia 21 de...</h6>
-                            <a href="#" class="card-link">Leia Mais...</a>
-                        </div>
-                        <a href="https://www.batatais.sp.gov.br/noticias/prefeitura-lanca-projeto-“artesanato-criativo-de-batatais”-para-impulsionar-inovacao-e-valorizar-os-artesaos-locais" class="stretched-link"></a>
-                    </div>
-                    <div class="card flex-row" data-aos="fade-up" data-aos-delay="500" data-aos-duration="700">
-                        <div class="card-image">
-                            <img src="https://www.batatais.sp.gov.br/uploads/noticias/capa/medium/news_3615_570_370_202510151356560807160.jpg" class="img-fluid" alt="Batatais marca presença na Feira do Empreendedor 2025 e reforça compromisso com o desenvolvimento regional" />
-                        </div>
-                        <div class="card-body">
-                            <span class="card-category" style="background-color:#cccccc;color:#353535;">Comunicação</span>
-                            <span class="card-date">15/10/2025</span>
-                            <h5 class="card-title">Batatais marca presença na Feira do Empreendedor 2025 e reforça compromisso com o desenvolvimento regional</h5>
-                            <h6 class="card-subtitle">&nbsp; A Estância Turística de Batatais participa da 14ª edição da Feira do Empreendedor, o maior evento de empreendedorismo da América Latina, realizado pelo...</h6>
-                            <a href="#" class="card-link">Leia Mais...</a>
-                        </div>
-                        <a href="https://www.batatais.sp.gov.br/noticias/batatais-marca-presenca-na-feira-do-empreendedor-2025-e-reforca-compromisso-com-o-desenvolvimento-regional" class="stretched-link"></a>
-                    </div>
-                    <div class="card flex-row" data-aos="fade-up" data-aos-delay="500" data-aos-duration="700">
-                        <div class="card-image">
-                            <img src="https://www.batatais.sp.gov.br/uploads/noticias/capa/medium/news_3614_570_370_202510141520176598290.jpg" class="img-fluid" alt="Prefeitura de Batatais adota padrão nacional da Nota Fiscal de Serviços Eletrônica a partir de 1º de novembro" />
-                        </div>
-                        <div class="card-body">
-                            <span class="card-category" style="background-color:#cccccc;color:#353535;">Comunicação</span>
-                            <span class="card-date">14/10/2025</span>
-                            <h5 class="card-title">Prefeitura de Batatais adota padrão nacional da Nota Fiscal de Serviços Eletrônica a partir de 1º de novembro</h5>
-                            <h6 class="card-subtitle">A Prefeitura de Batatais informa que, a partir de 1º de novembro de 2025, o município passará a utilizar o Emissor Nacional da Nota Fiscal de Serviços Eletrônica...</h6>
-                            <a href="#" class="card-link">Leia Mais...</a>
-                        </div>
-                        <a href="https://www.batatais.sp.gov.br/noticias/prefeitura-de-batatais-adota-padrao-nacional-da-nota-fiscal-de-servicos-eletronica-a-partir-de-1º-de-novembro" class="stretched-link"></a>
-                    </div>
-                    <div class="card flex-row" data-aos="fade-up" data-aos-delay="500" data-aos-duration="700">
-                        <div class="card-image">
-                            <img src="https://www.batatais.sp.gov.br/uploads/noticias/capa/medium/news_3613_570_370_202510141256410163370.jpg" class="img-fluid" alt="Prefeitura de Batatais lança Censo Animal 2025 para mapear cães e gatos do município" />
-                        </div>
-                        <div class="card-body">
-                            <span class="card-category" style="background-color:#6daf74;color:black;">Meio Ambiente</span>
-                            <span class="card-date">14/10/2025</span>
-                            <h5 class="card-title">Prefeitura de Batatais lança Censo Animal 2025 para mapear cães e gatos do município</h5>
-                            <h6 class="card-subtitle">A Prefeitura de Batatais, por meio da Secretaria de Meio Ambiente, Agricultura e Proteção Animal, deu início ao Censo Animal 2025, uma importante iniciativa voltada ao...</h6>
-                            <a href="#" class="card-link">Leia Mais...</a>
-                        </div>
-                        <a href="https://www.batatais.sp.gov.br/noticias/prefeitura-de-batatais-lanca-censo-animal-2025-para-mapear-caes-e-gatos-do-municipio" class="stretched-link"></a>
-                    </div>
                     <div class="card flex-row" data-aos="fade-up" data-aos-delay="500" data-aos-duration="700">
                         <div class="card-image">
                             <img src="https://www.batatais.sp.gov.br/uploads/noticias/capa/medium/news_3612_570_370_202510141225116637360.jpeg" class="img-fluid" alt="Alunos da rede municipal de ensino conhecem de perto a produção de alimentos da merenda escolar" />
                         </div>
                         <div class="card-body">
-                            <span class="card-category" style="background-color:#7d52f1;color:#353535;">Educação</span>
+                            <span class="card-category category-educacao">Educação</span>
                             <span class="card-date">14/10/2025</span>
                             <h5 class="card-title">Alunos da rede municipal de ensino conhecem de perto a produção de alimentos da merenda escolar</h5>
                             <h6 class="card-subtitle">Iniciativa da Secretaria Municipal de Educação reforça a importância da alimentação saudável e valoriza a produção da agricultura...</h6>
                             <a href="#" class="card-link">Leia Mais...</a>
                         </div>
                         <a href="https://www.batatais.sp.gov.br/noticias/alunos-da-rede-municipal-de-ensino-conhecem-de-perto-a-producao-de-alimentos-da-merenda-escolar" class="stretched-link"></a>
-                    </div>
-                    <div class="card flex-row" data-aos="fade-up" data-aos-delay="500" data-aos-duration="700">
-                        <div class="card-image">
-                            <img src="https://www.batatais.sp.gov.br/uploads/noticias/capa/medium/news_3611_570_370_202510140818349530500.jpg" class="img-fluid" alt="Semusa realiza ‘Dia D’ da Campanha de Multivacinação neste sábado (18/10)" />
-                        </div>
-                        <div class="card-body">
-                            <span class="card-category" style="background-color:#26e07d;color:#353535;">Saúde</span>
-                            <span class="card-date">14/10/2025</span>
-                            <h5 class="card-title">Semusa realiza ‘Dia D’ da Campanha de Multivacinação neste sábado (18/10)</h5>
-                            <h6 class="card-subtitle">A Prefeitura de Batatais, por meio da Semusa (Secretaria Municipal de Saúde), promove no próximo sábado, 18 de outubro, o Dia D da Campanha de Multivacinação, com o...</h6>
-                            <a href="#" class="card-link">Leia Mais...</a>
-                        </div>
-                        <a href="https://www.batatais.sp.gov.br/noticias/semusa-realiza-‘dia-d’-da-campanha-de-multivacinacao-neste-sabado-1810" class="stretched-link"></a>
-                    </div>
-                    <div class="card flex-row" data-aos="fade-up" data-aos-delay="500" data-aos-duration="700">
-                        <div class="card-image">
-                            <img src="https://www.batatais.sp.gov.br/uploads/noticias/capa/medium/news_3610_570_370_202510130906332061070.jpg" class="img-fluid" alt="Conexão Rosa: Cuidar, Inspirar e Transformar Juntas" />
-                        </div>
-                        <div class="card-body">
-                            <span class="card-category" style="background-color:#cccccc;color:#353535;">Comunicação</span>
-                            <span class="card-date">13/10/2025</span>
-                            <h5 class="card-title">Conexão Rosa: Cuidar, Inspirar e Transformar Juntas</h5>
-                            <h6 class="card-subtitle">Batatais promove evento especial com foco em saúde, acolhimento e empreendedorismo feminino Em alusão ao Outubro Rosa, Batatais recebe nos próximos dias 20 e 21 de outubro a...</h6>
-                            <a href="#" class="card-link">Leia Mais...</a>
-                        </div>
-                        <a href="https://www.batatais.sp.gov.br/noticias/conexao-rosa-cuidar-inspirar-e-transformar-juntas" class="stretched-link"></a>
-                    </div>
-                    <div class="card flex-row" data-aos="fade-up" data-aos-delay="500" data-aos-duration="700">
-                        <div class="card-image">
-                            <img src="https://www.batatais.sp.gov.br/uploads/noticias/capa/medium/news_3609_570_370_202510101118570659440.jpg" class="img-fluid" alt="Secretaria Municipal de Assistência Social realiza ação especial pelo Dia das Crianças" />
-                        </div>
-                        <div class="card-body">
-                            <span class="card-category" style="background-color:#f7b0e1;color:#353535;">Assistência Social</span>
-                            <span class="card-date">10/10/2025</span>
-                            <h5 class="card-title">Secretaria Municipal de Assistência Social realiza ação especial pelo Dia das Crianças</h5>
-                            <h6 class="card-subtitle">Em comemoração ao Dia das Crianças, a Secretaria Municipal de Assistência Social e Cidadania de Batatais promove no próximo dia 17, sexta-feira, a ação...</h6>
-                            <a href="#" class="card-link">Leia Mais...</a>
-                        </div>
-                        <a href="https://www.batatais.sp.gov.br/noticias/secretaria-municipal-de-assistencia-social-realiza-acao-especial-pelo-dia-das-criancas" class="stretched-link"></a>
                     </div>
                 </div>
                 <a href="https://www.batatais.sp.gov.br/noticias" class="btn btn-outline-purple mx-auto" data-aos="fade-up" data-aos-delay="700" data-aos-duration="700">Clique aqui e veja mais notícias</a>
@@ -515,7 +353,7 @@
             </div>
         </section>
 
-        <section class="about overflow-hidden" id="about" style="background:url(https://www.batatais.sp.gov.br/uploads/institucional/historia/large/bg_home_1_1920_1420_202308231647142704090.jpg) fixed center;">
+        <section class="about overflow-hidden about-section-bg" id="about">
             <div class="container" style="position:relative;">
                 <h6 data-aos="fade-up" data-aos-delay="200" data-aos-duration="700">CONHEÇA A CIDADE</h6>
                 <h2 data-aos="fade-up" data-aos-delay="300" data-aos-duration="700">ESTÂNCIA TURÍSTICA DE BATATAIS</h2>
@@ -617,9 +455,9 @@
                     <span class="footer-title mb-3">Prefeitura de Batatais</span>
                     <ul class="nav nav-info flex-column gap-3">
                         <li class="nav-item lh-sm">
-                            <a href="tel:+551636603400" class="nav-icon nav-icon--telefone">
+                            <a href="tel:+551637617200" class="nav-icon nav-icon--telefone">
                                 <i class="bi bi-telephone"></i>
-                                (16) 3660-3400
+                                (16) 3761-7200
                             </a>
                         </li>
                         <li class="nav-item lh-sm">
@@ -723,5 +561,35 @@
     <script type="text/javascript" src="https://www.batatais.sp.gov.br/view/js/index.js"></script>
     <!-- Nosso novo arquivo de acessibilidade -->
     <script type="text/javascript" src="acessibilidade.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const bannerWrapper = document.querySelector('.swiper-banner .swiper-wrapper');
+
+            fetch('news.json')
+                .then(response => response.json())
+                .then(newsItems => {
+                    newsItems.forEach(item => {
+                        if (item.published) {
+                            const slide = `
+                                <div class="swiper-slide">
+                                    <a href="${item.link}" target="_blank">
+                                        <picture>
+                                            <source media="(min-width: 600px)" srcset="${item.imageUrl}" />
+                                            <img src="${item.imageUrl}" class="img-fluid" alt="${item.altText}" />
+                                        </picture>
+                                    </a>
+                                </div>
+                            `;
+                            bannerWrapper.innerHTML += slide;
+                        }
+                    });
+
+                    // Reinicializa o Swiper depois de adicionar os slides
+                    var swiper = new Swiper('.swiper-banner', (window.swiperOptions && window.swiperOptions.banner) || {});
+                })
+                .catch(error => console.error('Erro ao carregar as notícias do banner:', error));
+        });
+    </script>
 </body>
 </html>
