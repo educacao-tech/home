@@ -8,43 +8,46 @@
 // Aguarda o carregamento completo do DOM antes de registrar os eventos.
 document.addEventListener('DOMContentLoaded', function() {
 
+    const htmlElement = document.documentElement;
+    let currentFontSize = parseFloat(window.getComputedStyle(htmlElement).fontSize);
+    const initialFontSize = currentFontSize;
+
     // --- Funções de Acessibilidade ---
-    // NOTA: A implementação real destas funções deve ser adicionada aqui.
-    // Elas manipulam o DOM para alterar fontes, cores, etc.
 
     function aumentarFonte() {
         console.log('Função "aumentarFonte" foi chamada.');
-        // Exemplo de implementação:
-        // const elements = document.querySelectorAll('body, p, a, h1, h2, h3, h4, h5, h6, span, li, button');
-        // elements.forEach(el => {
-        //     let currentSize = parseFloat(window.getComputedStyle(el, null).getPropertyValue('font-size'));
-        //     if (currentSize < 24) { // Limite para não ficar gigante
-        //        el.style.fontSize = (currentSize + 1) + 'px';
-        //     }
-        // });
+        if (currentFontSize < 22) { // Adiciona um limite para não aumentar indefinidamente
+            currentFontSize += 1;
+            htmlElement.style.fontSize = currentFontSize + 'px';
+        }
     }
 
     function diminuirFonte() {
         console.log('Função "diminuirFonte" foi chamada.');
-        // Implementação aqui...
+        if (currentFontSize > 12) { // Adiciona um limite para não diminuir indefinidamente
+            currentFontSize -= 1;
+            htmlElement.style.fontSize = currentFontSize + 'px';
+        }
     }
 
     function autoContraste() {
         console.log('Função "autoContraste" foi chamada.');
         // Adiciona ou remove a classe 'alto-contraste' do body
-        document.body.classList.toggle('alto-contraste');
+        htmlElement.classList.toggle('alto-contraste');
     }
 
     function invertColors() {
         console.log('Função "invertColors" foi chamada.');
-        // Exemplo de implementação:
-        // document.documentElement.classList.toggle('invert-colors');
-        // CSS: html.invert-colors { filter: invert(1); }
+        htmlElement.classList.toggle('invert-colors');
     }
 
     function reiniciarAjustesAcessibilidade() {
         console.log('Função "reiniciarAjustesAcessibilidade" foi chamada.');
-        // Implementação aqui... (remover classes e resetar estilos inline)
+        // Reseta o tamanho da fonte
+        currentFontSize = initialFontSize;
+        htmlElement.style.fontSize = '';
+        // Remove as classes de acessibilidade
+        htmlElement.classList.remove('alto-contraste', 'invert-colors');
     }
 
     // --- Registro dos Event Listeners ---
