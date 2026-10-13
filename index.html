@@ -1,248 +1,183 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, user-scalable=no" />
-    <meta name="theme-color" content="#383d7f" />
-    <meta name="author" content="3dots" />
-    <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
-    <title>Prefeitura de Batatais</title>
-    <meta name="description" content="Estância Turística de Batatais - Prefeitura de Batatais - Telefone: (16) 3761-7200" />
-    <link href='https://www.batatais.sp.gov.br/view/images/favicon.ico' rel='shortcut' type='image/x-icon' />
-    <link href='https://www.batatais.sp.gov.br/view/images/favicon.png' rel='icon' type='image/png' />
-    <style type="text/css">
-        :root {
-            --cor_primaria-fundo: #383d7f;
-            --cor_primaria-fonte: white;
-            --cor_secundaria-fundo: white;
-            --cor_secundaria-fonte: #383d7f;
-        }
-    </style>
-    <link rel="stylesheet" type="text/css" href="https://www.batatais.sp.gov.br/view/css/bootstrap.min.css?t=20251016081209" />
-    <link rel="stylesheet" type="text/css" href="https://www.batatais.sp.gov.br/view/css/fonts.css?t=20251016081209" />
-    <link rel="stylesheet" type="text/css" href="https://www.batatais.sp.gov.br/view/css/font-awesome.css?t=20251016081209" />
-    <link rel="stylesheet" type="text/css" href="https://www.batatais.sp.gov.br/view/css/bootstrap-icons.css?t=20251016081209" />
-    <link rel="stylesheet" type="text/css" href="https://www.batatais.sp.gov.br/view/css/swiper-bundle.min.css?t=20251016081209" />
-    <link rel="stylesheet" type="text/css" href="https://www.batatais.sp.gov.br/view/css/jquery.fancybox.min.css?t=20251016081209" />
-    <link rel="stylesheet" type="text/css" href="https://www.batatais.sp.gov.br/view/css/home.css?t=20251016081209" />
-    <link rel="stylesheet" type="text/css" href="https://www.batatais.sp.gov.br/view/css/style.css?t=20251016081209" />
-    <link rel="stylesheet" type="text/css" href="https://www.batatais.sp.gov.br/view/css/acessibilidade.css?t=20251016081209" />
-    <style>
-        .swiper-banner .swiper-slide {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .swiper-banner .swiper-slide img {
-            width: auto;
-            max-width: 100%;
-            max-height: 100%;
-            object-fit: contain; /* Garante que a imagem seja contida, mantendo a proporção */
-        }
-        /* Estilos para o modo de Alto Contraste */
-        .alto-contraste {
-            background-color: #000 !important;
-            color: #FFF !important;
-        }
-        .alto-contraste *, .alto-contraste *:before, .alto-contraste *:after {
-            color: #FFF !important; /* Garante que TODO o texto fique branco */
-            background-color: transparent !important; /* Remove fundos que possam mascarar o texto */
-        }
-        .alto-contraste .card, .alto-contraste .header, .alto-contraste .footer {
-            background-color: #111 !important;
-            border: 1px solid #FFF;
-        }
-        /* Estilos para Inverter Cores */
-        .invert-colors {
-            filter: invert(100%);
-            background-color: #fff; /* Evita fundo preto em imagens invertidas */
-        }
-        /* Classes para categorias de notícias */
-        .category-educacao { background-color: #7d52f1; color: #fff; }
-        .category-comunicacao { background-color: #cccccc; color: #353535; }
-        .category-meio-ambiente { background-color: #6daf74; color: black; }
-        /* ... outras categorias ... */
-        .about-section-bg {
-            background: url(https://www.batatais.sp.gov.br/uploads/institucional/historia/large/bg_home_1_1920_1420_202308231647142704090.jpg) fixed center;
-        }
-    </style>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#2b3a67" />
+    <meta name="description" content="Secretaria Municipal de Educação de Batatais (SME Batatais) - Portal oficial com informações sobre projetos, rede socioassistencial, matrículas, creches, escolas e serviços educacionais." />
+    <title>SME BATATAIS - Secretaria Municipal de Educação</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/img/footer_logo_sme.png" />
+    <link rel="shortcut icon" type="image/png" href="assets/img/footer_logo_sme.png" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..700;1,300..700&family=Oswald:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS Frameworks & Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
 </head>
-<body id="home">
-    <header class="header">
-        <div class="header-info">
-            <div class="container d-flex align-items-center justify-content-between">
-                <div class="accessibility dropdown">
-                    <a class="dropdown-toggle" href="#" role="button" id="dropdownAccessibility" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <span class="icone icone-redondo icone-acessibilidade">
-                            <i class="bi bi-universal-access-circle"></i>
-                        </span>
-                        <span class="dropdown-text d-none d-md-flex">Acessibilidade</span>
-                    </a>
-                    <div class="dropdown-menu animate slideIn" aria-labelledby="dropdownAccessibility">
-                        <a class="dropdown-item" href="#" id="aumentar-fonte"><i class="fa-solid fa-plus"></i> Aumentar Fonte</a>
-                        <a class="dropdown-item" href="#" id="diminuir-fonte"><i class="fa-solid fa-minus"></i> Diminuir Fonte</a>
-                        <a class="dropdown-item" href="#" id="auto-contraste"><i class="fa-solid fa-circle-half-stroke"></i> Auto Contraste</a>
-                        <a class="dropdown-item" href="#" id="inverter-cores"><i class="fa-solid fa-fill-drip"></i> Inverter Cores</a>
-                        <a class="dropdown-item" href="#" id="reiniciar-acessibilidade"><i class="fa-solid fa-arrows-rotate"></i> Reiniciar</a>
-                    </div>
-                </div>
-                <div class="header-phone d-flex align-items-center gap-3 d-xl-none">
-                    <span>Fale com a secretaria:</span>
-                    <a href="tel:+551637617200">(16) 3761-7200</a>
-                </div>
-                <ul class="nav d-none d-xl-flex align-items-xl-center gap-xl-2">
-                    <li class="nav-item">
-                        <a href="/cdn-cgi/l/email-protection#1a697f79687f6e7b68737b5a787b6e7b6e7b736934696a347d756c347868" class="icone icone-email">
-                            <i class="bi bi-envelope-fill"></i>
-                            <span><span class="__cf_email__" data-cfemail="3f4c5a5c4d5a4b5e4d565e7f5d5e4b5e4b5e564c114c4f11585049115d4d">[email&#160;protected]</span></span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="https://www.facebook.com/EstanciaTuristicaDeBatatais" class="icone icone-redondo icone-facebook" target="_blank">
-                            <i class="fa-brands fa-facebook-f"></i>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="https://www.instagram.com/prefeituradebatatais/" class="icone icone-redondo icone-instagram" target="_blank">
-                            <i class="fa-brands fa-instagram"></i>
-                        </a>
-                    </li>
+<body id="top">
+
+    <!-- Top Bar (Accessibility & Contact Info) -->
+    <div class="top-bar">
+        <div class="container d-flex flex-wrap justify-content-between align-items-center gap-2">
+            <!-- Acessibilidade Dropdown -->
+            <div class="dropdown">
+                <button class="accessibility-btn dropdown-toggle" type="button" id="dropdownAcessibilidade" data-bs-toggle="dropdown" aria-expanded="false" title="Menu de Acessibilidade">
+                    <i class="bi bi-universal-access-circle fs-6"></i>
+                    <span>Acessibilidade</span>
+                </button>
+                <ul class="dropdown-menu shadow" aria-labelledby="dropdownAcessibilidade">
+                    <li><a class="dropdown-item" href="#" id="aumentar-fonte"><i class="fa-solid fa-plus me-2 text-primary"></i> Aumentar Fonte</a></li>
+                    <li><a class="dropdown-item" href="#" id="diminuir-fonte"><i class="fa-solid fa-minus me-2 text-primary"></i> Diminuir Fonte</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#" id="auto-contraste"><i class="fa-solid fa-circle-half-stroke me-2 text-warning"></i> Alto Contraste</a></li>
+                    <li><a class="dropdown-item" href="#" id="inverter-cores"><i class="fa-solid fa-fill-drip me-2 text-info"></i> Inverter Cores</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#" id="reiniciar-acessibilidade"><i class="fa-solid fa-arrows-rotate me-2 text-danger"></i> Reiniciar Ajustes</a></li>
                 </ul>
             </div>
-        </div>
-        <nav class="navbar navbar-expand-xl" id="navbar">
-            <div class="container gap-3 gap-sm-4">
-                <h1 class="navbar-brand me-0">
-                    <img class="max-width img-fluid" src="https://www.batatais.sp.gov.br/uploads/tema/logotipo/logotipo_202406061431347772400.png" alt="Prefeitura de Batatais" />
-                </h1>
-                <button class="navbar-toggler icon icon--transparent" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <div class="navbar-phone d-none d-xl-flex flex-xl-column align-items-xl-end lh-1">
-                    <span>Fale com a secretaria:</span>
-                    <a href="tel:+551637617200">
-                        <i class="bi bi-telephone"></i>
-                        (16) 3761-7200
+
+            <!-- Contatos Rápidos & Redes Sociais -->
+            <div class="d-flex align-items-center gap-3">
+                <div class="d-none d-md-flex align-items-center gap-2 text-light">
+                    <i class="bi bi-telephone-fill text-warning"></i>
+                    <span>(16) 3761-7200 / 3662-6616</span>
+                </div>
+                <div class="d-none d-lg-flex align-items-center gap-2 text-light border-start ps-3 border-secondary">
+                    <i class="bi bi-envelope-fill text-warning"></i>
+                    <a href="mailto:sme@educacao.batatais.sp.gov.br">sme@educacao.batatais.sp.gov.br</a>
+                </div>
+                <div class="social-icons d-flex align-items-center ms-2">
+                    <a href="https://www.youtube.com/c/SecretariaMunicipaldeEduca%C3%A7%C3%A3odeBatatais" target="_blank" title="YouTube SME Batatais" aria-label="YouTube">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                    <a href="https://www.facebook.com/EstanciaTuristicaDeBatatais" target="_blank" title="Facebook" aria-label="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/prefeituradebatatais/" target="_blank" title="Instagram" aria-label="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
                     </a>
                 </div>
-                <form method="post" action="https://www.batatais.sp.gov.br/noticias" class="form-search">
-                    <div class="input-group">
-                        <input type="hidden" name="act" value="procurar" />
-                        <input type="text" name="pesquisar_noticias" id="pesquisar_noticias" class="form-control form-control-lg" placeholder="O que você procura?" required="required" />
-                        <button type="submit" class="input-group-text">
-                            <i class="fa-solid fa-lg fa-magnifying-glass"></i>
-                        </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Navigation Bar -->
+    <header class="main-navbar">
+        <nav class="navbar navbar-expand-xl py-0">
+            <div class="container">
+                <!-- Brand / Logo -->
+                <a class="navbar-brand" href="#top" title="Secretaria Municipal de Educação de Batatais">
+                    <img src="assets/img/footer_logo_sme.png" alt="SME Batatais Logotipo" class="img-fluid" />
+                    <div>
+                        <h1 class="brand-title">SME BATATAIS</h1>
+                        <span class="brand-subtitle">Secretaria de Educação</span>
                     </div>
-                </form>
-                <div class="navbar-collapse collapse" id="navbarToggler">
-                    <ul class="navbar-nav mx-auto">
+                </a>
+
+                <!-- Mobile Toggle Button -->
+                <button class="navbar-toggler border-0 p-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMainContent" aria-controls="navbarMainContent" aria-expanded="false" aria-label="Alternar navegação">
+                    <i class="fa-solid fa-bars fs-3 text-dark"></i>
+                </button>
+
+                <!-- Nav Links -->
+                <div class="collapse navbar-collapse mt-3 mt-xl-0" id="navbarMainContent">
+                    <ul class="navbar-nav ms-auto align-items-xl-center gap-1">
+                        <!-- Início (Ativo) -->
+                        <li class="nav-item">
+                            <a class="nav-link active active-badge" href="#top" aria-current="page">
+                                <i class="fa-solid fa-house"></i> Início
+                            </a>
+                        </li>
+
+                        <!-- A Secretaria Dropdown -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle " href="https://www.batatais.sp.gov.br/como-chegar" role="button" id="dropdownPrefeitura" data-bs-toggle="dropdown-menu" aria-haspopup="true" aria-expanded="false">Prefeitura</a>
-                            <ul class="dropdown-menu animate slideIn" aria-labelledby="dropdownPrefeitura">
-                                <li><a class="dropdown-item" href="https://www.batatais.sp.gov.br/prefeito">Prefeito e Vice-Prefeito</a></li>
-                                <li><a class="dropdown-item" href="https://www.batatais.sp.gov.br/galeria-de-prefeitos">Galeria de Prefeitos</a></li>
-                                <li><a class="dropdown-item" href="https://www.batatais.sp.gov.br/como-chegar">Como Chegar</a></li>
+                            <a class="nav-link dropdown-toggle" href="#" id="menuSecretaria" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                A Secretaria
+                            </a>
+                            <ul class="dropdown-menu animate slideIn" aria-labelledby="menuSecretaria">
+                                <li><a class="dropdown-item" href="https://sites.google.com/educacao.batatais.sp.gov.br/seceduc/a-secretaria/creches-municipais" target="_blank"><i class="fa-solid fa-baby me-2 text-danger"></i> Creches Municipais</a></li>
+                                <li><a class="dropdown-item" href="https://sites.google.com/educacao.batatais.sp.gov.br/seceduc/a-secretaria/escolas-municipais" target="_blank"><i class="fa-solid fa-school me-2 text-primary"></i> Escolas Municipais</a></li>
+                                <li><a class="dropdown-item" href="https://sites.google.com/educacao.batatais.sp.gov.br/seceduc/a-secretaria/escolas-estaduais" target="_blank"><i class="fa-solid fa-landmark me-2 text-success"></i> Escolas Estaduais</a></li>
                             </ul>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle " href="https://www.batatais.sp.gov.br/historia" role="button" id="dropdownCidade" data-bs-toggle="dropdown-menu" aria-haspopup="true" aria-expanded="false">Cidade</a>
-                            <ul class="dropdown-menu animate slideIn" aria-labelledby="dropdownCidade">
-                                <li><a class="dropdown-item" href="https://www.batatais.sp.gov.br/historia">História</a></li>
-                                <li><a class="dropdown-item" href="https://www.batatais.sp.gov.br/cidade/dados-gerais">Dados Gerais</a></li>
-                                <li><a class="dropdown-item" href="https://www.batatais.sp.gov.br/cidade/simbolos">Símbolos</a></li>
-                                <li><a class="dropdown-item" href="https://www.batatais.sp.gov.br/cidade/pontos-turisticos">Pontos Turísticos</a></li>
-                                <li><a class="dropdown-item" href="https://www.batatais.sp.gov.br/cidade/eventos">Eventos</a></li>
-                                <li><a class="dropdown-item" href="https://www.batatais.sp.gov.br/cidade/servicos-na-cidade">Serviços na Cidade</a></li>
-                            </ul>
+
+                        <!-- Cardápio -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://educacao-tech.github.io/cardapio_2026/" target="_blank">
+                                <i class="fa-solid fa-utensils"></i> Cardápio
+                            </a>
                         </li>
+
+                        <!-- Diário Oficial -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://www.batatais.sp.gov.br/diario-oficial" target="_blank">
+                                <i class="fa-solid fa-newspaper"></i> Diário Oficial
+                            </a>
+                        </li>
+
+                        <!-- EDM -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://educacao-tech.github.io/educacaodigital/" target="_blank">
+                                <i class="fa-solid fa-laptop-code"></i> EDM
+                            </a>
+                        </li>
+
+                        <!-- Calendário Letivo Dropdown -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle " href="#" role="button" id="dropdownServicos" data-bs-toggle="dropdown-menu" aria-haspopup="true" aria-expanded="false">Serviços</a>
-                            <ul class="dropdown-menu animate slideIn" aria-labelledby="dropdownServicos">
-                                <li class="submenu">
-                                    <a class="dropdown-item dropdown-toggle" href="#" role="button" id="dropdownSubmenuCidadao" data-bs-toggle="dropdown-submenu" aria-haspopup="true" aria-expanded="false">Cidadão</a>
-                                    <ul class="dropdown-submenu animate slideIn" aria-labelledby="dropdownSubmenuCidadao">
-                                        <li><a class="dropdown-item" href="https://batatais.fatura.agenciavirtual.gestaosaneamentoweb.com.br/" target="_blank">2ª via - Conta de água</a></li>
-                                        <li><a class="dropdown-item" href="https://www.batatais.sp.gov.br/servicos/cidadao/carta-de-servicos" target="_self">Carta de Serviços</a></li>
-                                        <li><a class="dropdown-item" href="https://www.batatais.sp.gov.br/servicos/cidadao/certidoes" target="_self">Certidões</a></li>
-                                        <li><a class="dropdown-item" href="https://protocolo.betha.cloud/" target="_blank">Consulte seu Protocolo</a></li>
-                                        <li><a class="dropdown-item" href="https://saude.batatais.sp.gov.br/decretos-resolucoes-e-portarias/" target="_blank">Decretos e Portaria Covid</a></li>
-                                        <li><a class="dropdown-item" href="https://www.batatais.sp.gov.br/decretos-e-portarias" target="_self">Decretos e Portarias</a></li>
-                                        <li><a class="dropdown-item" href="https://e-gov.betha.com.br/cdweb/03114-460/contribuinte/con_situacaocontribuinte.faces" target="_blank">Dívida Ativa</a></li>
-                                        <li><a class="dropdown-item" href="https://ip.somasig.com.br/ocorrencias/batatais" target="_blank">Iluminação Pública</a></li>
-                                        <li><a class="dropdown-item" href="https://e-gov.betha.com.br/cdweb/resource.faces?params=3YVi0wwktDP_cka5cYp4YA==" target="_blank">IPTU</a></li>
-                                        <li><a class="dropdown-item" href="https://e-gov.betha.com.br/cdweb/resource.faces?params=3YVi0wwktDOz4-sqzUpFrA==" target="_blank">ITBI</a></li>
-                                        <li><a class="dropdown-item" href="https://protocolo.betha.cloud" target="_blank">Protocolo Online</a></li>
-                                        <li><a class="dropdown-item" href="https://www.batatais.sp.gov.br/servicos/cidadao/siafic-–-sistema-unico-e-integrado-de-execucao-orcamentaria-administracao-financeira-e-controle" target="_self">SIAFIC</a></li>
-                                        <li><a class="dropdown-item" href="http://batatais.sipladu.com.br/" target="_blank">SIPLADU</a></li>
-                                        <li><a class="dropdown-item" href="https://www.batatais.sp.gov.br/servicos/cidadao/transferencias-especiais" target="_self">Transferências Especiais</a></li>
-                                    </ul>
-                                </li>
-                                <li class="submenu">
-                                    <a class="dropdown-item dropdown-toggle" href="#" role="button" id="dropdownSubmenuConselhos" data-bs-toggle="dropdown-submenu" aria-haspopup="true" aria-expanded="false">Conselhos</a>
-                                    <ul class="dropdown-submenu animate slideIn" aria-labelledby="dropdownSubmenuConselhos">
-                                        <li><a class="dropdown-item" href="https://www.batatais.sp.gov.br/servicos/conselhos/conselho-municipal-da-assistencia-social" target="_self">Assistência Social</a></li>
-                                        <li><a class="dropdown-item" href="https://www.batatais.sp.gov.br/servicos/conselhos/conselho-municipal-de-participacao-e-de-desenvolvimento-da-comunidade-negra-de-batatais" target="_self">Compadecon</a></li>
-                                        <li><a class="dropdown-item" href="https://www.batatais.sp.gov.br/servicos/conselhos/conselho-municipal-de-turismo" target="_self">Comtur</a></li>
-                                        <li><a class="dropdown-item" href="https://www.batatais.sp.gov.br/servicos/conselhos/conselho-tutelar" target="_self">Conselho Tutelar</a></li>
-                                        <li><a class="dropdown-item" href="https://www.batatais.sp.gov.br/servicos/conselhos/conselho-municipal-dos-direitos-da-crianca-e-adolescente-de-batatais-–-cmdca" target="_self">Criança e Adolescente</a></li>
-                                        <li><a class="dropdown-item" href="https://www.batatais.sp.gov.br/servicos/conselhos/conselho-municipal-dos-direitos-da-pessoa-com-deficiencia" target="_self">Pessoa com Deficiência</a></li>
-                                        <li><a class="dropdown-item" href="https://www.batatais.sp.gov.br/servicos/conselhos/conselho-municipal-dos-direitos-da-pessoa-idosa" target="_self">Pessoa Idosa</a></li>
-                                        <li><a class="dropdown-item" href="https://www.batatais.sp.gov.br/servicos/conselhos/conselho-municipal-de-politicas-culturais" target="_self">Políticas Culturais</a></li>
-                                    </ul>
-                                </li>
-                                <li class="submenu">
-                                    <a class="dropdown-item dropdown-toggle" href="#" role="button" id="dropdownSubmenuEmpresa" data-bs-toggle="dropdown-submenu" aria-haspopup="true" aria-expanded="false">Empresa</a>
-                                    <ul class="dropdown-submenu animate slideIn" aria-labelledby="dropdownSubmenuEmpresa">
-                                        <li><a class="dropdown-item" href="https://www.batatais.sp.gov.br/servicos/empresa/chamamentos-publicos" target="_self">Chamamentos Público</a></li>
-                                        <li><a class="dropdown-item" href="https://www.batatais.sp.gov.br/servicos/empresa/nota-fiscal-eletronica-fly-enota-para-empresas" target="_self">ISS</a></li>
-                                        <li><a class="dropdown-item" href="https://www.batatais.sp.gov.br/servicos/empresa/itr-imposto-territorial-rural" target="_self">ITR</a></li>
-                                        <li><a class="dropdown-item" href="https://www.batatais.sp.gov.br/facilitasp/" target="_blank">Programa FACILITASP</a></li>
-                                        <li><a class="dropdown-item" href="https://protocolo.betha.cloud/" target="_blank">Sistema de Obras</a></li>
-                                    </ul>
-                                </li>
-                                <li class="submenu">
-                                    <a class="dropdown-item dropdown-toggle" href="#" role="button" id="dropdownSubmenuServidor" data-bs-toggle="dropdown-submenu" aria-haspopup="true" aria-expanded="false">Servidor</a>
-                                    <ul class="dropdown-submenu animate slideIn" aria-labelledby="dropdownSubmenuServidor">
-                                        <li><a class="dropdown-item" href="https://www.batatais.sp.gov.br/servicos/servidor/eleicoes-cipa" target="_self">ELEIÇÕES CIPA</a></li>
-                                        <li><a class="dropdown-item" href="https://minhafolha.betha.cloud/" target="_blank">Servidor Online</a></li>
-                                        <li><a class="dropdown-item" href="http://batatais.sp.gov.br/webmail" target="_blank">Webmail</a></li>
-                                    </ul>
+                            <a class="nav-link dropdown-toggle" href="#" id="menuCalendario" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa-regular fa-calendar-days"></i> Calendário Letivo
+                            </a>
+                            <ul class="dropdown-menu animate slideIn" aria-labelledby="menuCalendario">
+                                <li>
+                                    <a class="dropdown-item" href="https://docs.google.com/spreadsheets/d/1B-q6ydppnCDjtzNg7SLkfuzoTp3GFX2u/edit?usp=sharing&ouid=116154735950320601146&rtpof=true&sd=true" target="_blank">
+                                        <i class="fa-solid fa-table me-2 text-primary"></i> Escolas (Planilha)
+                                    </a>
                                 </li>
                             </ul>
                         </li>
+
+                        <!-- Parcerias Dropdown -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle " href="#" role="button" id="dropdownSecretarias" data-bs-toggle="dropdown-menu" aria-haspopup="true" aria-expanded="false">Secretarias</a>
-                            <ul class="dropdown-menu animate slideIn" aria-labelledby="dropdownSecretarias">
-                                <li><a class="dropdown-item" href="https://www.batatais.sp.gov.br/secretarias/administracao-e-recursos-humanos">Administração e Recursos Humanos</a></li>
-                                <li><a class="dropdown-item" href="https://www.batatais.sp.gov.br/secretarias/assistencia-social-e-cidadania">Assistência Social e Cidadania</a></li>
-                                <li><a class="dropdown-item" href="https://www.batatais.sp.gov.br/secretarias/cultura-e-turismo">Cultura e Turismo</a></li>
-                                <li><a class="dropdown-item" href="https://www.batatais.sp.gov.br/secretarias/desenvolvimento-economico-e-inovacao">Desenvolvimento Econômico e Inovação</a></li>
-                                <li><a class="dropdown-item" href="https://www.batatais.sp.gov.br/secretarias/educacao">Educação</a></li>
-                                <li><a class="dropdown-item" href="https://www.batatais.sp.gov.br/secretarias/esportes-e-lazer">Esportes e Lazer</a></li>
-                                <li><a class="dropdown-item" href="https://www.batatais.sp.gov.br/secretarias/financas">Finanças</a></li>
-                                <li><a class="dropdown-item" href="https://www.batatais.sp.gov.br/secretarias/fundo-social-de-solidariedade">Fundo Social de Solidariedade</a></li>
-                                <li><a class="dropdown-item" href="https://www.batatais.sp.gov.br/secretarias/gabinete">Gabinete</a></li>
-                                <li><a class="dropdown-item" href="https://www.batatais.sp.gov.br/secretarias/infraestrutura-e-urbanismo">Infraestrutura e Urbanismo</a></li>
-                                <li><a class="dropdown-item" href="https://www.batatais.sp.gov.br/secretarias/meio-ambiente-agricultura-e-protecao-animal">Meio Ambiente, Agricultura e Proteção Animal</a></li>
-                                <li><a class="dropdown-item" href="https://www.batatais.sp.gov.br/secretarias/planejamento-e-gestao-estrategica">Planejamento e Gestão Estratégica</a></li>
-                                <li><a class="dropdown-item" href="https://www.batatais.sp.gov.br/secretarias/politicas-para-mulheres-direitos-humanos-igualdade-e-diversidade">Políticas para Mulheres, Direitos Humanos, Igualdade e Diversidade</a></li>
-                                <li><a class="dropdown-item" href="https://www.batatais.sp.gov.br/secretarias/saude">Saúde</a></li>
-                                <li><a class="dropdown-item" href="https://www.batatais.sp.gov.br/secretarias/servicos-publicos">Serviços Públicos</a></li>
+                            <a class="nav-link dropdown-toggle" href="#" id="menuParcerias" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fa-solid fa-handshake"></i> Parcerias
+                            </a>
+                            <ul class="dropdown-menu animate slideIn" aria-labelledby="menuParcerias">
+                                <li><a class="dropdown-item" href="https://sites.google.com/educacao.batatais.sp.gov.br/seceduc/parcerias/eurípedes" target="_blank">EURÍPEDES</a></li>
+                                <li><a class="dropdown-item" href="https://sites.google.com/educacao.batatais.sp.gov.br/seceduc/parcerias/nuapi" target="_blank">NUAPI</a></li>
+                                <li><a class="dropdown-item" href="https://sites.google.com/educacao.batatais.sp.gov.br/seceduc/parcerias/fernando-faro" target="_blank">FERNANDO FARO</a></li>
+                                <li><a class="dropdown-item" href="https://sites.google.com/educacao.batatais.sp.gov.br/seceduc/parcerias/apae" target="_blank">APAE</a></li>
+                                <li><a class="dropdown-item" href="https://sites.google.com/educacao.batatais.sp.gov.br/seceduc/parcerias/campinho" target="_blank">CAMPINHO</a></li>
+                                <li><a class="dropdown-item" href="https://sites.google.com/educacao.batatais.sp.gov.br/seceduc/parcerias/batea" target="_blank">BATEA</a></li>
+                                <li><a class="dropdown-item" href="https://sites.google.com/educacao.batatais.sp.gov.br/seceduc/parcerias/menino-jesus" target="_blank">MENINO JESUS</a></li>
+                                <li><a class="dropdown-item" href="https://sites.google.com/educacao.batatais.sp.gov.br/seceduc/parcerias/samaritanos" target="_blank">SAMARITANOS</a></li>
+                                <li><a class="dropdown-item" href="https://sites.google.com/educacao.batatais.sp.gov.br/seceduc/parcerias/cantinho" target="_blank">CANTINHO</a></li>
                             </ul>
                         </li>
+
+                        <!-- LGPD -->
                         <li class="nav-item">
-                            <a class="nav-link" href="https://transparencia.betha.cloud/#/Vnn8OKahLxXP0oaln6nqaw==" target="_blank">Transparência</a>
+                            <a class="nav-link" href="https://batatais.sp.gov.br/lgpd/" target="_blank">
+                                <i class="fa-solid fa-shield-halved"></i> LGPD
+                            </a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link " href="https://www.batatais.sp.gov.br/concursos">Concursos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link " href="https://www.batatais.sp.gov.br/noticias">Notícias</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link " href="https://www.batatais.sp.gov.br/ouvidoria">Contato e Ouvidoria</a>
+
+                        <!-- Pesquisa / Busca -->
+                        <li class="nav-item ms-xl-2">
+                            <button class="nav-search-btn" type="button" data-bs-toggle="modal" data-bs-target="#searchModal" title="Pesquisar no site">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                                <span class="d-none d-xxl-inline">Pesquisar</span>
+                            </button>
                         </li>
                     </ul>
                 </div>
@@ -251,298 +186,295 @@
     </header>
 
     <main>
-        <section class="banner" id="banner">
+        <!-- Dynamic News Banner (Swiper Slider from news.json) -->
+        <section class="hero-slider-section" aria-label="Notícias e Destaques em Banner">
             <div class="swiper swiper-banner">
-                <div class="swiper-wrapper">
-                    <!-- Os slides do banner serão inseridos aqui dinamicamente -->
+                <div class="swiper-wrapper" id="banner-wrapper">
+                    <!-- Slides populados via JavaScript (news.json) -->
                 </div>
-                <div class="swiper-button-next d-none d-md-flex"></div>
-                <div class="swiper-button-prev d-none d-md-flex"></div>
+                <div class="swiper-button-next text-white"></div>
+                <div class="swiper-button-prev text-white"></div>
                 <div class="swiper-pagination"></div>
             </div>
         </section>
 
-        <section class="highlights overflow-hidden" id="highlights">
+        <!-- Top Feature Pillars Section (PROJETOS, REDE SOCIOASSISTENCIAL, APOIO À APRENDIZAGEM) -->
+        <section class="pillar-section" id="pilares" aria-label="Pilares Educacionais da Secretaria">
             <div class="container">
-                <h2 class="section-title" data-aos="fade-up" data-aos-delay="200" data-aos-duration="700">
-                    <small>Serviços em</small>
-                    <span>Destaque</span>
-                </h2>
-                <div class="grid">
-                    <a href="https://www.batatais.sp.gov.br/uploads/files/carta_de_servicos.pdf" target="_blank" class="highlight-card" data-aos="fade-up" data-aos-delay="500" data-aos-duration="700">
-                        <img src="https://www.batatais.sp.gov.br/uploads/destaques_home/icone/icon_13_60_60_202503280954333513760.png" class="img-fluid" alt="Carta de Serviços" />
-                        <img src="https://www.batatais.sp.gov.br/uploads/destaques_home/icone/icon_13_hover_60_60_202503280954333536550.png" class="img-fluid" alt="Carta de Serviços" />
-                        <span>Carta de Serviços</span>
-                    </a>
-                    <a href="https://observatorio.batatais.sp.gov.br/pesquisappa/ipesquisa" target="_blank" class="highlight-card" data-aos="fade-up" data-aos-delay="500" data-aos-duration="700">
-                        <img src="https://www.batatais.sp.gov.br/uploads/destaques_home/icone/icon_12_60_60_202409191402182055450.png" class="img-fluid" alt="ORÇAMENTO PARTICIPATIVO" />
-                        <img src="https://www.batatais.sp.gov.br/uploads/destaques_home/icone/icon_12_hover_60_60_202409191402182097860.png" class="img-fluid" alt="ORÇAMENTO PARTICIPATIVO" />
-                        <span>ORÇAMENTO PARTICIPATIVO</span>
-                    </a>
-                    <a href="https://www.batatais.sp.gov.br/diario-oficial" target="_self" class="highlight-card" data-aos="fade-up" data-aos-delay="500" data-aos-duration="700">
-                        <img src="https://www.batatais.sp.gov.br/uploads/destaques_home/icone/icon_1_60_60_202308211521566394360.png" class="img-fluid" alt="Diário Oficial" />
-                        <img src="https://www.batatais.sp.gov.br/uploads/destaques_home/icone/icon_1_hover_60_60_202308211521566420690.png" class="img-fluid" alt="Diário Oficial" />
-                        <span>Diário Oficial</span>
-                    </a>
-                    <a href="https://www.batatais.sp.gov.br/concursos" target="_self" class="highlight-card" data-aos="fade-up" data-aos-delay="500" data-aos-duration="700">
-                        <img src="https://www.batatais.sp.gov.br/uploads/destaques_home/icone/icon_2_60_60_202308211531286734400.png" class="img-fluid" alt="Concursos" />
-                        <img src="https://www.batatais.sp.gov.br/uploads/destaques_home/icone/icon_2_hover_60_60_202308211531286764520.png" class="img-fluid" alt="Concursos" />
-                        <span>Concursos</span>
-                    </a>
-                    <a href="https://licitacao.batatais.sp.gov.br/" target="_blank" class="highlight-card" data-aos="fade-up" data-aos-delay="500" data-aos-duration="700">
-                        <img src="https://www.batatais.sp.gov.br/uploads/destaques_home/icone/icon_3_60_60_202308211552345050220.png" class="img-fluid" alt="Editais e Licitações" />
-                        <img src="https://www.batatais.sp.gov.br/uploads/destaques_home/icone/icon_3_hover_60_60_202308211552345074380.png" class="img-fluid" alt="Editais e Licitações" />
-                        <span>Editais e Licitações</span>
-                    </a>
-                    <a href="https://www.batatais.sp.gov.br/decretos-e-portarias" target="_self" class="highlight-card" data-aos="fade-up" data-aos-delay="500" data-aos-duration="700">
-                        <img src="https://www.batatais.sp.gov.br/uploads/destaques_home/icone/icon_4_60_60_202309131546100639860.png" class="img-fluid" alt="Decretos e Portarias" />
-                        <img src="https://www.batatais.sp.gov.br/uploads/destaques_home/icone/icon_4_hover_60_60_202309131546100711420.png" class="img-fluid" alt="Decretos e Portarias" />
-                        <span>Decretos e Portarias</span>
-                    </a>
-                    <a href="https://agendamentocadunico.batatais.sp.gov.br/principal/" target="_blank" class="highlight-card" data-aos="fade-up" data-aos-delay="500" data-aos-duration="700">
-                        <img src="https://www.batatais.sp.gov.br/uploads/destaques_home/icone/icon_5_60_60_202308211554071263230.png" class="img-fluid" alt="Agendamento Cadúnico" />
-                        <img src="https://www.batatais.sp.gov.br/uploads/destaques_home/icone/icon_5_hover_60_60_202308211554071287740.png" class="img-fluid" alt="Agendamento Cadúnico" />
-                        <span>Agendamento Cadúnico</span>
-                    </a>
-                    <a href="https://e-gov.betha.com.br/cdweb/03114-365/contribuinte/rel_guiaiptu.faces" target="_blank" class="highlight-card" data-aos="fade-up" data-aos-delay="500" data-aos-duration="700">
-                        <img src="https://www.batatais.sp.gov.br/uploads/destaques_home/icone/icon_6_60_60_202308211554466403730.png" class="img-fluid" alt="TRIBUTAÇÃO MUNICIPAL - CERTIDÕES" />
-                        <img src="https://www.batatais.sp.gov.br/uploads/destaques_home/icone/icon_6_hover_60_60_202308211554466425280.png" class="img-fluid" alt="TRIBUTAÇÃO MUNICIPAL - CERTIDÕES" />
-                        <span>TRIBUTAÇÃO MUNICIPAL - CERTIDÕES</span>
-                    </a>
-                    <a href="https://e-gov.betha.com.br/e-nota/login.faces" target="_blank" class="highlight-card" data-aos="fade-up" data-aos-delay="500" data-aos-duration="700">
-                        <img src="https://www.batatais.sp.gov.br/uploads/destaques_home/icone/icon_10_60_60_202308211557115028190.png" class="img-fluid" alt="Nota Fiscal Eletrônica" />
-                        <img src="https://www.batatais.sp.gov.br/uploads/destaques_home/icone/icon_10_hover_60_60_202308211557115049390.png" class="img-fluid" alt="Nota Fiscal Eletrônica" />
-                        <span>Nota Fiscal Eletrônica</span>
-                    </a>
-                    <a href="https://e-gov.betha.com.br/cdweb/03114-398/contribuinte/rel_guiaiptu.faces" target="_blank" class="highlight-card" data-aos="fade-up" data-aos-delay="500" data-aos-duration="700">
-                        <img src="https://www.batatais.sp.gov.br/uploads/destaques_home/icone/icon_11_60_60_202402061011053362690.png" class="img-fluid" alt="IPTU" />
-                        <img src="https://www.batatais.sp.gov.br/uploads/destaques_home/icone/icon_11_hover_60_60_202402061011059493250.png" class="img-fluid" alt="IPTU" />
-                        <span>IPTU</span>
-                    </a>
-                </div>
-            </div>
-            <div class="scrollbar-h"></div>
-        </section>
+                <div class="row g-4 justify-content-center">
+                    <!-- Card 1: Projetos -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <a href="https://sites.google.com/educacao.batatais.sp.gov.br/seceduc/projetos" target="_blank" class="pillar-card" title="Conheça os Projetos da SME Batatais">
+                            <div class="pillar-img-wrap">
+                                <img src="assets/img/card_projetos.png" alt="Projetos Educacionais SME Batatais" class="img-fluid" loading="lazy" />
+                            </div>
+                            <h2 class="pillar-title">PROJETOS</h2>
+                            <p class="pillar-desc">Temas transversais trabalhados durante o ano letivo</p>
+                        </a>
+                    </div>
 
-        <section class="news overflow-hidden py-5" id="news">
-            <div class="container">
-                <h2 class="section-title" data-aos="fade-up" data-aos-delay="200" data-aos-duration="700">
-                    <small>Últimas</small>
-                    <span>Notícias</span>
-                </h2>
-                <div class="content">
-                    <div class="card flex-row" data-aos="fade-up" data-aos-delay="500" data-aos-duration="700">
-                        <div class="card-image">
-                            <img src="https://www.batatais.sp.gov.br/uploads/noticias/capa/medium/news_3612_570_370_202510141225116637360.jpeg" class="img-fluid" alt="Alunos da rede municipal de ensino conhecem de perto a produção de alimentos da merenda escolar" />
-                        </div>
-                        <div class="card-body">
-                            <span class="card-category category-educacao">Educação</span>
-                            <span class="card-date">14/10/2025</span>
-                            <h5 class="card-title">Alunos da rede municipal de ensino conhecem de perto a produção de alimentos da merenda escolar</h5>
-                            <h6 class="card-subtitle">Iniciativa da Secretaria Municipal de Educação reforça a importância da alimentação saudável e valoriza a produção da agricultura...</h6>
-                            <a href="#" class="card-link">Leia Mais...</a>
-                        </div>
-                        <a href="https://www.batatais.sp.gov.br/noticias/alunos-da-rede-municipal-de-ensino-conhecem-de-perto-a-producao-de-alimentos-da-merenda-escolar" class="stretched-link"></a>
+                    <!-- Card 2: Rede Socioassistencial e Educacional -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <a href="https://sites.google.com/educacao.batatais.sp.gov.br/seceduc/apoio" target="_blank" class="pillar-card" title="Rede Socioassistencial e Educacional">
+                            <div class="pillar-img-wrap">
+                                <img src="assets/img/card_rede.png" alt="Rede Socioassistencial e Educacional" class="img-fluid" loading="lazy" />
+                            </div>
+                            <h2 class="pillar-title">REDE SOCIOASSISTENCIAL E EDUCACIONAL</h2>
+                            <p class="pillar-desc">Programas governamentais socioeducativos</p>
+                        </a>
+                    </div>
+
+                    <!-- Card 3: Apoio à Aprendizagem -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <a href="https://sites.google.com/educacao.batatais.sp.gov.br/seceduc/apoio" target="_blank" class="pillar-card" title="Apoio à Aprendizagem">
+                            <div class="pillar-img-wrap">
+                                <img src="assets/img/card_apoio.png" alt="Equipe CEDAP - Apoio à Aprendizagem" class="img-fluid" loading="lazy" />
+                            </div>
+                            <h2 class="pillar-title">APOIO À APRENDIZAGEM</h2>
+                            <p class="pillar-desc">Programas que garantem a todos o acesso a educação</p>
+                        </a>
                     </div>
                 </div>
-                <a href="https://www.batatais.sp.gov.br/noticias" class="btn btn-outline-purple mx-auto" data-aos="fade-up" data-aos-delay="700" data-aos-duration="700">Clique aqui e veja mais notícias</a>
             </div>
         </section>
 
-        <section class="banner-ad" id="banner-ad">
+        <!-- Red Accent Line Divider -->
+        <hr class="section-divider-red" />
+
+        <!-- DESTAQUES Section (6 Gradient Cards) -->
+        <section class="destaques-section" id="destaques" aria-label="Seção de Destaques">
             <div class="container">
-                <a href="https://ip.somasig.com.br/ocorrencias/batatais" target="_blank">
-                    <picture>
-                        <source media="(min-width: 768px)" srcset="https://www.batatais.sp.gov.br/uploads/banners/large/banner_70_1350_330_202508121651387001430.jpg">
-                        <img src="https://www.batatais.sp.gov.br/uploads/banners/large/banner_70_380_150_202508121651389271280.jpg" class="img-fluid" alt="Iluminação Pública - Clique aqui para registrar ocorrências" />
-                    </picture>
-                </a>
-            </div>
-        </section>
-
-        <section class="about overflow-hidden about-section-bg" id="about">
-            <div class="container" style="position:relative;">
-                <h6 data-aos="fade-up" data-aos-delay="200" data-aos-duration="700">CONHEÇA A CIDADE</h6>
-                <h2 data-aos="fade-up" data-aos-delay="300" data-aos-duration="700">ESTÂNCIA TURÍSTICA DE BATATAIS</h2>
-                <div class="text" data-aos="fade-up" data-aos-delay="400" data-aos-duration="700">
-                    Batatais é um dos 70 municípios do estado de São Paulo reconhecidos como estâncias turísticas, título conferido pelo cumprimento de critérios específicos estabelecidos pela legislação estadual.<br />
-                    Entre suas atrações turísticas mais destacadas estão as obras do renomado artista Candido Portinari. É aqui, em Batatais, que se encontra o maior acervo de obras sacras do pintor. Essas obras estão em exposição no imponente Santuário do Senhor Bom Jesus da Cana Verde, localizado no centro da cidade e situado a 16 quilômetros da cidade natal do artista, Brodowski. <br />
-                    A igreja abriga 23 obras de Portinari, incluindo "Os Milagres de Nossa Senhora", "Via Sacra" (composta por 14 quadros), "Jesus e os Apóstolos", "A Sagrada Família", "Fuga para o Egito" e "O Batismo e Martírio de São Sebastião".<br />
-                    Em virtude de sua importância artística e histórica, o conjunto de 14 quadros da Via Sacra, pintados por Candido Portinari em 1954, foi tombado pelo Iphan (Instituto do Patrimônio Histórico e Artístico Nacional) e pelo Condephaat (Conselho de Defesa do Patrimônio Histórico, Arqueológico, Artístico e Turístico do Estado de São Paulo). Essa preservação reconhece a relevância cultural dessas obras, enriquecendo o patrimônio artístico da cidade de Batatais.<br />
-                    <br />
-                    <br />
+                <div class="destaques-header">
+                    <h2 class="destaques-title">DESTAQUES</h2>
                 </div>
-                <a href="https://www.batatais.sp.gov.br/historia" class="btn btn-outline-white mx-auto" data-aos="fade-up" data-aos-delay="600" data-aos-duration="700">Clique e Saiba Mais</a>
-            </div>
-        </section>
 
-        <section class="useful-links overflow-hidden" id="useful-links">
-            <div class="container">
-                <h2 class="section-title" data-aos="fade-up" data-aos-delay="200" data-aos-duration="700">
-                    <small>Links</small>
-                    <span>Úteis</span>
-                </h2>
-                <div class="grid">
-                    <a class="btn btn-grid" href="https://www.batatais.sp.gov.br/servicos/outros/lei-paulo-gustavo" target="_blank" data-aos="fade-up" data-aos-delay="500" data-aos-duration="700">Lei Paulo Gustavo</a>
-                    <a class="btn btn-grid" href="https://www.batatais.sp.gov.br/servicos/outros/lei-aldir-blanc" target="_self" data-aos="fade-up" data-aos-delay="500" data-aos-duration="700">LEI ALDIR BLANC</a>
-                    <a class="btn btn-grid" href="https://www.batatais.sp.gov.br/servicos/empresa/chamamentos-publico" target="_self" data-aos="fade-up" data-aos-delay="500" data-aos-duration="700">Chamamentos Público</a>
-                    <a class="btn btn-grid" href="https://pncp.gov.br/app/pca/45299104000187/2025" target="_blank" data-aos="fade-up" data-aos-delay="500" data-aos-duration="700">Plano Anual de Contratações 2025</a>
-                    <a class="btn btn-grid" href="https://falabr.cgu.gov.br/publico/SP/BATATAIS/Manifestacao/RegistrarManifestacao" target="_blank" data-aos="fade-up" data-aos-delay="500" data-aos-duration="700">Ouvidoria Municipal de Batatais</a>
-                    <a class="btn btn-grid" href="https://transparencia.betha.cloud/#/Vnn8OKahLxXP0oaln6nqaw==/acesso-informacao" target="_blank" data-aos="fade-up" data-aos-delay="500" data-aos-duration="700">E-Sic</a>
-                    <a class="btn btn-grid" href="https://minhafolha.betha.cloud/" target="_blank" data-aos="fade-up" data-aos-delay="500" data-aos-duration="700">Servidor Online</a>
-                    <a class="btn btn-grid" href="https://www.batatais.sp.gov.br/servicos/empresa/iss" target="_self" data-aos="fade-up" data-aos-delay="500" data-aos-duration="700">ISS Online</a>
-                    <a class="btn btn-grid" href="https://www.batatais.sp.gov.br/servicos/cidadao/siafic" target="_self" data-aos="fade-up" data-aos-delay="500" data-aos-duration="700">SIAFIC</a>
-                    <a class="btn btn-grid" href="https://www.batatais.sp.gov.br/servicos/cidadao/transporte-coletivo" target="_self" data-aos="fade-up" data-aos-delay="500" data-aos-duration="700">Horários de Ônibus Municipais</a>
+                <div class="row row-cols-2 row-cols-md-3 row-cols-lg-6 g-3 g-md-4 justify-content-center">
+                    <!-- Destaque 1: Conselhos -->
+                    <div class="col">
+                        <a href="https://sites.google.com/educacao.batatais.sp.gov.br/seceduc/conselhos" target="_blank" class="destaque-card" title="Conselhos Municipais">
+                            <img src="assets/img/destaque_conselhos.png" alt="Conselhos" loading="lazy" />
+                        </a>
+                    </div>
+
+                    <!-- Destaque 2: Currículo, Formação e Avaliação -->
+                    <div class="col">
+                        <a href="https://sites.google.com/educacao.batatais.sp.gov.br/seceduc/currículo-formação-e-avaliação" target="_blank" class="destaque-card" title="Currículo, Formação e Avaliação">
+                            <img src="assets/img/destaque_curriculo.png" alt="Currículo, Formação e Avaliação" loading="lazy" />
+                        </a>
+                    </div>
+
+                    <!-- Destaque 3: Plano Municipal de Educação -->
+                    <div class="col">
+                        <a href="https://sites.google.com/educacao.batatais.sp.gov.br/seceduc/plano-municipal-de-educação" target="_blank" class="destaque-card" title="Plano Municipal de Educação">
+                            <img src="assets/img/destaque_plano_educacao.png" alt="Plano Municipal de Educação" loading="lazy" />
+                        </a>
+                    </div>
+
+                    <!-- Destaque 4: Plano Municipal pela Primeira Infância -->
+                    <div class="col">
+                        <a href="https://sites.google.com/educacao.batatais.sp.gov.br/seceduc/plano-municipal-da-primeira-infância" target="_blank" class="destaque-card" title="Plano Municipal pela Primeira Infância">
+                            <img src="assets/img/destaque_primeira_infancia.png" alt="Plano Municipal pela Primeira Infância" loading="lazy" />
+                        </a>
+                    </div>
+
+                    <!-- Destaque 5: Legislação -->
+                    <div class="col">
+                        <a href="https://sites.google.com/educacao.batatais.sp.gov.br/seceduc/legislação" target="_blank" class="destaque-card" title="Legislação">
+                            <img src="assets/img/destaque_legislacao.png" alt="Legislação" loading="lazy" />
+                        </a>
+                    </div>
+
+                    <!-- Destaque 6: Licitações -->
+                    <div class="col">
+                        <a href="http://licitacao.batatais.sp.gov.br/" target="_blank" class="destaque-card" title="Licitações">
+                            <img src="assets/img/destaque_licitacoes.png" alt="Licitações" loading="lazy" />
+                        </a>
+                    </div>
                 </div>
             </div>
-            <div class="scrollbar-h"></div>
         </section>
 
-        <section class="videos overflow-hidden" id="videos">
+        <!-- Red Accent Line Divider -->
+        <hr class="section-divider-red" />
+
+        <!-- Middle Section: Painel de Matrículas + Professores e Servidores + Comunidade -->
+        <section class="middle-section" id="servicos-educacao" aria-label="Painel de Serviços e Portais">
             <div class="container">
-                <h2 class="section-title mb-5" data-aos="fade-up" data-aos-delay="200" data-aos-duration="700">
-                    <small>Galeria de</small>
-                    <span>Vídeos</span>
-                </h2>
-                <div class="position-relative" data-aos="fade-up" data-aos-delay="500" data-aos-duration="700">
-                    <div class="swiper swiper-videos pb-4">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="card">
-                                    <a href="https://www.youtube.com/watch?v=tXVTnJDxleY" class="stretched-link" data-fancybox></a>
-                                    <img src="https://www.batatais.sp.gov.br/uploads/videos/capa/capa_video_2_320_190_202401161723098089470.png" class="card-img-top" alt="" />
-                                    <div class="card-body">
-                                        <span>Vídeo "Batatais é Assim"</span>
-                                    </div>
-                                </div>
+                <div class="row g-4 align-items-stretch">
+                    <!-- Coluna 1: Painel de Matrículas -->
+                    <div class="col-12 col-lg-4">
+                        <div class="matriculas-panel">
+                            <div class="matriculas-header">
+                                <i class="fa-solid fa-gauge-high"></i>
+                                <h3>Painel de Matrículas</h3>
                             </div>
-                            <div class="swiper-slide">
-                                <div class="card">
-                                    <a href="https://www.youtube.com/watch?v=bxGLVl8GLFA" class="stretched-link" data-fancybox></a>
-                                    <img src="https://www.batatais.sp.gov.br/uploads/videos/capa/capa_video_1_320_190_202310311451092695790.jpeg" class="card-img-top" alt="" />
-                                    <div class="card-body">
-                                        <span>Desfile Rosa 2023</span>
-                                    </div>
-                                </div>
-                            </div>
+                            <nav class="matriculas-nav" aria-label="Ações de Matrícula">
+                                <a href="https://sites.google.com/educacao.batatais.sp.gov.br/seceduc/inscri%C3%A7%C3%A3o-para-creches" target="_blank" class="btn-matricula" id="btn-inscricao">
+                                    <i class="fa-solid fa-file-pen"></i>
+                                    <span>Inscrição para Creches</span>
+                                </a>
+                                <a href="https://docs.google.com/spreadsheets/d/1UcBsKx_OeJ6WmoKkRVb439oKgLDNhRoWIFBfQgrIbg0/edit?gid=2023777180#gid=2023777180" target="_blank" class="btn-matricula" id="btn-lista-espera">
+                                    <i class="fa-solid fa-list-ol"></i>
+                                    <span>Lista espera 2026</span>
+                                </a>
+                                <a href="https://docs.google.com/spreadsheets/d/18X6cMyZQqNp_wN1JzQzsL8YGBuwi-6dO2TxfzrLdtIk/edit?gid=2023777180#gid=2023777180" target="_blank" class="btn-matricula" id="btn-lista-atendidos">
+                                    <i class="fa-solid fa-child-reaching"></i>
+                                    <span>Lista Atendidos 2026</span>
+                                </a>
+                                <a href="https://drive.google.com/file/d/1FyH2JI88pDoOfy_vE8qzSgrIFtccxmGc/view" target="_blank" class="btn-matricula" id="btn-criterios">
+                                    <i class="fa-solid fa-gavel"></i>
+                                    <span>Critérios da Lista Espera</span>
+                                </a>
+                                <a href="https://sites.google.com/educacao.batatais.sp.gov.br/seceduc/inscri%C3%A7%C3%A3o-para-ei-e-ef" target="_blank" class="btn-matricula" id="btn-ei-ef">
+                                    <i class="fa-solid fa-school"></i>
+                                    <span>Inscrição EI e EF</span>
+                                </a>
+                            </nav>
                         </div>
                     </div>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
+
+                    <!-- Coluna 2: Professores e Servidores -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="portal-col">
+                            <div class="portal-illus-wrap">
+                                <img src="assets/img/professores.png" alt="Professores e servidores" class="img-fluid" loading="lazy" />
+                            </div>
+                            <ul class="portal-links-list">
+                                <li>
+                                    <a href="http://portaldoprofessor.mec.gov.br/index.html" target="_blank" rel="noopener noreferrer">
+                                        Portal do Professor
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://minhafolha.betha.cloud/" target="_blank" rel="noopener noreferrer">
+                                        Minha Folha
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Coluna 3: Comunidade -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="portal-col">
+                            <div class="portal-illus-wrap">
+                                <img src="assets/img/comunidade.png" alt="Comunidade" class="img-fluid" loading="lazy" />
+                            </div>
+                            <ul class="portal-links-list">
+                                <li>
+                                    <a href="https://sites.google.com/educacao.batatais.sp.gov.br/seceduc/inscrição-para-eja" target="_blank">
+                                        Educação de Jovens e Adultos
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://sites.google.com/educacao.batatais.sp.gov.br/seceduc/estágio" target="_blank">
+                                        Vagas de estágio
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="scrollbar-h"></div>
+        </section>
+
+        <!-- Nossas Redes Sociais Banner -->
+        <section class="social-banner-section" aria-label="Redes Sociais Oficiais">
+            <div class="container">
+                <div class="row align-items-center justify-content-between g-3">
+                    <div class="col-12 col-lg-auto text-center text-lg-start">
+                        <h2 class="social-banner-title">NOSSAS REDES SOCIAIS</h2>
+                    </div>
+                    <div class="col-12 col-lg-auto">
+                        <div class="social-banner-links justify-content-center">
+                            <!-- YouTube -->
+                            <a href="https://www.youtube.com/c/SecretariaMunicipaldeEduca%C3%A7%C3%A3odeBatatais" target="_blank" class="social-btn" title="Canal da Secretaria Municipal de Educação no YouTube">
+                                <img src="assets/img/social_youtube.png" alt="YouTube SME Batatais" />
+                            </a>
+                            <!-- Facebook -->
+                            <a href="https://www.facebook.com/EstanciaTuristicaDeBatatais" target="_blank" class="social-btn" title="Facebook Oficial da Prefeitura de Batatais">
+                                <img src="assets/img/icon_facebook.png" alt="Facebook" />
+                            </a>
+                            <!-- Instagram -->
+                            <a href="https://www.instagram.com/prefeituradebatatais/" target="_blank" class="social-btn" title="Instagram Oficial da Prefeitura de Batatais">
+                                <img src="assets/img/icon_instagram.png" alt="Instagram" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
-    <footer class="footer">
+    <!-- Site Footer -->
+    <footer class="site-footer">
         <div class="container">
-            <div class="row gap-5 gap-md-0">
-                <div class="col-md-12 col-xl-3">
-                    <div class="d-flex justify-content-center">
-                        <img src="https://www.batatais.sp.gov.br/uploads/tema/logotipo/logo_footer_202406061431347970630.png" class="img-fluid logo" alt="Prefeitura de Batatais" />
-                    </div>
-                    <div class="socials">
-                        <span class="footer-title mb-3">Siga-nos nas redes sociais</span>
-                        <ul class="nav gap-2">
-                            <li class="nav-item">
-                                <a href="https://www.facebook.com/EstanciaTuristicaDeBatatais" class="icone icone-redondo icone-facebook" target="_blank">
-                                    <i class="fa-brands fa-facebook-f"></i>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="https://www.instagram.com/prefeituradebatatais/" class="icone icone-redondo icone-instagram" target="_blank">
-                                    <i class="fa-brands fa-instagram"></i>
-                                </a>
-                            </li>
-                        </ul>
+            <div class="row g-4 align-items-center">
+                <!-- Coluna 1: Endereço -->
+                <div class="col-12 col-md-5 col-lg-4 text-center text-md-start">
+                    <h3 class="footer-col-title">SECRETARIA MUNICIPAL DE EDUCAÇÃO DE BATATAIS</h3>
+                    <div class="footer-address">
+                        <p class="mb-1"><i class="bi bi-geo-alt-fill text-danger me-1"></i> Av. Moacir Dias de Morais, 1690 - Riachuelo</p>
+                        <p class="mb-1">CEP: 14315-358</p>
+                        <p class="mb-0">Batatais - SP</p>
                     </div>
                 </div>
-                <div class="col-md-4 col-lg-5 col-xl-4 ps-xl-4">
-                    <span class="footer-title mb-3">Prefeitura de Batatais</span>
-                    <ul class="nav nav-info flex-column gap-3">
-                        <li class="nav-item lh-sm">
-                            <a href="tel:+551637617200" class="nav-icon nav-icon--telefone">
-                                <i class="bi bi-telephone"></i>
-                                (16) 3761-7200
-                            </a>
-                        </li>
-                        <li class="nav-item lh-sm">
-                            <a href="https://goo.gl/maps/4o4TLd9LredNM9HM9" class="nav-icon nav-icon--mapa" target="_blank">
-                                <i class="bi bi-geo-alt"></i>
-                                Praça Doutor Paulo de Lima Corrêa, 1 - Centro<br />
-                                Batatais, SP - CEP: 14.300-033
-                            </a>
-                        </li>
-                        <li class="nav-item lh-sm">
-                            <a href="/cdn-cgi/l/email-protection#2457414756415045564d45644645504550454d570a57540a434b520a4656" class="nav-icon nav-icon--email">
-                                <i class="bi bi-envelope"></i>
-                                <span class="__cf_email__" data-cfemail="285b4d4b5a4d5c495a4149684a495c495c49415b065b58064f475e064a5a">[email&#160;protected]</span>
-                            </a>
-                        </li>
-                        <li class="nav-item lh-sm">
-                            <span class="nav-icon nav-icon--relogio">
-                                <i class="bi bi-clock"></i>
-                                Atendimento de segunda a sexta-feira, das 8h às 17h
-                            </span>
-                        </li>
-                    </ul>
+
+                <!-- Coluna 2: Contato -->
+                <div class="col-12 col-md-4 col-lg-4 text-center">
+                    <h3 class="footer-col-title">CONTATO</h3>
+                    <div class="footer-contacts">
+                        <p class="mb-1">
+                            <i class="bi bi-telephone-fill text-primary me-1"></i>
+                            <strong>(16) 3761-7200 / (16) 3662-6616</strong>
+                        </p>
+                        <a href="mailto:educacao@batatais.sp.gov.br"><i class="bi bi-envelope me-1"></i> educacao@batatais.sp.gov.br</a>
+                        <a href="mailto:sme@educacao.batatais.sp.gov.br"><i class="bi bi-envelope me-1"></i> sme@educacao.batatais.sp.gov.br</a>
+                    </div>
                 </div>
-                <div class="col-md-5 col-lg-4 col-xl-3">
-                    <span class="footer-title mb-3">Conheça a Prefeitura</span>
-                    <ul class="nav nav-links flex-column">
-                        <li class="nav-item"><a href="https://www.batatais.sp.gov.br/como-chegar">Como Chegar</a></li>
-                        <li class="nav-item"><a href="https://www.batatais.sp.gov.br/secretarias/administracao-e-recursos-humanos">Administração e Recursos Humanos</a></li>
-                        <li class="nav-item"><a href="https://www.batatais.sp.gov.br/secretarias/assistencia-social-e-cidadania">Assistência Social e Cidadania</a></li>
-                        <li class="nav-item"><a href="https://www.batatais.sp.gov.br/secretarias/cultura-e-turismo">Cultura e Turismo</a></li>
-                        <li class="nav-item"><a href="https://www.batatais.sp.gov.br/secretarias/desenvolvimento-economico-e-inovacao">Desenvolvimento Econômico e Inovação</a></li>
-                        <li class="nav-item"><a href="https://www.batatais.sp.gov.br/secretarias/educacao">Educação</a></li>
-                        <li class="nav-item"><a href="https://www.batatais.sp.gov.br/secretarias/esportes-e-lazer">Esportes e Lazer</a></li>
-                        <li class="nav-item"><a href="https://www.batatais.sp.gov.br/secretarias/financas">Finanças</a></li>
-                        <li class="nav-item"><a href="https://www.batatais.sp.gov.br/secretarias/fundo-social-de-solidariedade">Fundo Social de Solidariedade</a></li>
-                        <li class="nav-item"><a href="https://www.batatais.sp.gov.br/secretarias/gabinete">Gabinete</a></li>
-                        <li class="nav-item"><a href="https://www.batatais.sp.gov.br/secretarias/infraestrutura-e-urbanismo">Infraestrutura e Urbanismo</a></li>
-                        <li class="nav-item"><a href="https://www.batatais.sp.gov.br/secretarias/meio-ambiente-agricultura-e-protecao-animal">Meio Ambiente, Agricultura e Proteção Animal</a></li>
-                        <li class="nav-item"><a href="https://www.batatais.sp.gov.br/secretarias/planejamento-e-gestao-estrategica">Planejamento e Gestão Estratégica</a></li>
-                        <li class="nav-item"><a href="https://www.batatais.sp.gov.br/secretarias/politicas-para-mulheres-direitos-humanos-igualdade-e-diversidade">Políticas para Mulheres, Direitos Humanos, Igualdade e Diversidade</a></li>
-                        <li class="nav-item"><a href="https://www.batatais.sp.gov.br/secretarias/saude">Saúde</a></li>
-                        <li class="nav-item"><a href="https://www.batatais.sp.gov.br/secretarias/servicos-publicos">Serviços Públicos</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-3 col-lg-3 col-xl-2">
-                    <span class="footer-title mb-3">Sobre a Cidade</span>
-                    <ul class="nav nav-links flex-column">
-                        <li class="nav-item"><a href="https://www.batatais.sp.gov.br/historia">História Política</a></li>
-                        <li class="nav-item"><a href="https://www.batatais.sp.gov.br/galeria-de-prefeitos">Galeria de Prefeitos</a></li>
-                        <li class="nav-item"><a href="https://www.batatais.sp.gov.br/cidade/dados-gerais">Dados Gerais</a></li>
-                        <li class="nav-item"><a href="https://www.batatais.sp.gov.br/cidade/simbolos">Símbolos</a></li>
-                    </ul>
+
+                <!-- Coluna 3: Logo Oficial -->
+                <div class="col-12 col-md-3 col-lg-4 text-center text-md-end">
+                    <div class="footer-logo-wrap">
+                        <img src="assets/img/footer_logo_sme.png" alt="Secretaria Municipal de Educação de Batatais - Brasão" class="img-fluid" />
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="footer-copyright">
-            <div class="container">
-                <div class="copyright">
-                    <span>&copy; 2023 Prefeitura Municipal da Estância Turística de Batatais</span>
-                    <span>Todos os direitos reservados. <a href="politica-privacidade.php">Política de Privacidade.</a></span>
-                </div>
-                <div class="developed-by">
-                    <span>
-                        Desenvolvido por
-                        <a href="https://www.3dots.com.br/" target="_blank" class="text-decoration-none">
-                            <img src="https://www.batatais.sp.gov.br/view/images/logo_3dots.png" class="img-fluid" alt="3dots" />
-                        </a>
-                    </span>
-                </div>
+
+            <div class="footer-bottom">
+                <p class="mb-0">&copy; 2026 Secretaria Municipal de Educação de Batatais • Prefeitura Municipal da Estância Turística de Batatais. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
 
-    <div class="buttons-floating">
-        <a href="#" class="btn-arrow-up mx-auto" id="back-to-top">
-            <i class="fa-solid fa-arrow-up"></i>
-        </a>
+    <!-- Botão Flutuante Voltar ao Topo -->
+    <a href="#top" class="btn-floating-top" id="back-to-top" title="Voltar ao topo da página" aria-label="Voltar ao topo">
+        <i class="fa-solid fa-arrow-up"></i>
+    </a>
+
+    <!-- Modal de Pesquisa -->
+    <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow-lg">
+                <div class="modal-header bg-light">
+                    <h5 class="modal-title" id="searchModalLabel"><i class="fa-solid fa-magnifying-glass me-2 text-primary"></i> Pesquisar na Educação</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <form method="get" action="https://www.batatais.sp.gov.br/noticias" target="_blank">
+                        <div class="input-group">
+                            <input type="text" name="pesquisar_noticias" class="form-control form-control-lg" placeholder="O que você procura na educação?" required />
+                            <button class="btn btn-primary px-4" type="submit">
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <!-- VLibras Widget -->
     <div vw class="enabled">
         <div vw-access-button class="active"></div>
         <div vw-plugin-wrapper>
@@ -550,52 +482,83 @@
         </div>
     </div>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <!-- Scripts JavaScript -->
     <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
     <script>
         new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
-    <script type="text/javascript" src="https://www.batatais.sp.gov.br/view/js/jquery.min.js?t=20251016081209"></script>
-    <script type="text/javascript" src="https://www.batatais.sp.gov.br/view/js/bootstrap.bundle.min.js?t=20251016081209"></script>
-    <script type="text/javascript" src="https://www.batatais.sp.gov.br/view/js/jquery.mask.min.js?t=20251016081209"></script>
-    <script type="text/javascript" src="https://www.batatais.sp.gov.br/view/js/aos.js?t=20251016081209"></script>
-    <script type="text/javascript" src="https://www.batatais.sp.gov.br/view/js/swiper-bundle.min.js?t=20251016081209"></script>
-    <script type="text/javascript" src="https://www.batatais.sp.gov.br/view/js/jquery.fancybox.min.js?t=20251016081209"></script>
-    <script type="text/javascript" src="https://www.batatais.sp.gov.br/view/js/home.js?t=20251016081209"></script>
-    <script type="text/javascript">
-        var site_url = 'https://www.batatais.sp.gov.br';
-    </script>
-    <script type="text/javascript" src="https://www.batatais.sp.gov.br/view/js/index.js"></script>
-    <!-- Nosso novo arquivo de acessibilidade -->
-    <script type="text/javascript" src="acessibilidade.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
+    <!-- Script de Acessibilidade Oficial -->
+    <script src="acessibilidade.js"></script>
+
+    <!-- Inicialização do Banner com Notícias Educacionais -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const bannerWrapper = document.querySelector('.swiper-banner .swiper-wrapper');
+            const bannerWrapper = document.getElementById('banner-wrapper');
 
+            // Carrega notícias de news.json com tratamento robusto
             fetch('news.json')
-                .then(response => response.json())
+                .then(response => {
+                    if (!response.ok) throw new Error('Não foi possível carregar news.json');
+                    return response.json();
+                })
                 .then(newsItems => {
-                    newsItems.forEach(item => {
-                        if (item.published) {
-                            const slide = `
-                                <div class="swiper-slide">
-                                    <a href="${item.link}" target="_blank">
-                                        <picture>
-                                            <source media="(min-width: 600px)" srcset="${item.imageUrl}" />
-                                            <img src="${item.imageUrl}" class="img-fluid" alt="${item.altText}" />
-                                        </picture>
+                    if (newsItems && newsItems.length > 0) {
+                        newsItems.forEach(item => {
+                            if (item.published) {
+                                const slide = document.createElement('div');
+                                slide.className = 'swiper-slide position-relative';
+                                slide.innerHTML = `
+                                    <a href="${item.link}" target="_blank" rel="noopener noreferrer" class="w-100 d-block" title="${item.altText}">
+                                        <img src="${item.imageUrl}" class="img-fluid w-100" alt="${item.altText}" loading="lazy" />
+                                        <div class="banner-caption">
+                                            <h3>${item.altText}</h3>
+                                        </div>
                                     </a>
-                                </div>
-                            `;
-                            bannerWrapper.innerHTML += slide;
+                                `;
+                                bannerWrapper.appendChild(slide);
+                            }
+                        });
+                    }
+
+                    // Inicializa Swiper Carousel com autoplay suave e loop
+                    new Swiper('.swiper-banner', {
+                        loop: true,
+                        autoplay: {
+                            delay: 5000,
+                            disableOnInteraction: false,
+                        },
+                        navigation: {
+                            nextEl: '.swiper-button-next',
+                            prevEl: '.swiper-button-prev',
+                        },
+                        pagination: {
+                            el: '.swiper-pagination',
+                            clickable: true,
+                        },
+                        effect: 'fade',
+                        fadeEffect: {
+                            crossFade: true
                         }
                     });
-
-                    // Reinicializa o Swiper depois de adicionar os slides
-                    var swiper = new Swiper('.swiper-banner', (window.swiperOptions && window.swiperOptions.banner) || {});
                 })
-                .catch(error => console.error('Erro ao carregar as notícias do banner:', error));
+                .catch(err => {
+                    console.warn('Carregamento de notícias locais:', err);
+                });
+
+            // Rolagem suave para o topo
+            const backToTopBtn = document.getElementById('back-to-top');
+            if (backToTopBtn) {
+                window.addEventListener('scroll', () => {
+                    if (window.scrollY > 300) {
+                        backToTopBtn.style.display = 'flex';
+                    } else {
+                        backToTopBtn.style.display = 'none';
+                    }
+                });
+            }
         });
     </script>
 </body>

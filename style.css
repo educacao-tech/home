@@ -1,121 +1,814 @@
+/* ==========================================================================
+   Secretaria Municipal de Educação de Batatais (SME BATATAIS)
+   Design System & Styling Sheet
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Oswald:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary-color: #2b3a67;
+    --primary-dark: #1b264f;
+    --primary-light: #3f5185;
+    --accent-red: #d32f2f;
+    --accent-red-hover: #b71c1c;
+    --accent-blue: #1976d2;
+    --bg-light: #f8f9fa;
+    --bg-white: #ffffff;
+    --bg-gray: #f1f3f5;
+    --bg-footer: #e9ecef;
+    --text-main: #212529;
+    --text-muted: #6c757d;
+    --text-light: #f8f9fa;
+    --border-color: #dee2e6;
+    --card-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    --card-shadow-hover: 0 10px 25px rgba(0, 0, 0, 0.15);
+    --transition-fast: all 0.25s cubic-bezier(0.165, 0.84, 0.44, 1);
+    --transition-normal: all 0.35s ease;
+    --radius-sm: 6px;
+    --radius-md: 10px;
+    --radius-lg: 16px;
+    --font-heading: 'Oswald', sans-serif;
+    --font-body: 'Open Sans', 'Poppins', sans-serif;
+}
+
+/* Base & Reset */
+* {
+    box-sizing: border-box;
+}
+
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font-body);
+    color: var(--text-main);
+    background-color: var(--bg-light);
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    background-color: #121212;
-    /* Fundo escuro */
-    color: #e0e0e0;
-    /* Texto claro */
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
 }
 
-header,
-footer {
-    background: #1e1e1e;
-    /* Um tom de escuro ligeiramente diferente */
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-    border-bottom: 1px solid #333;
-    /* Linha sutil de separação */
-}
-
-footer {
-    border-top: 1px solid #333;
-}
-
-nav a {
-    color: #fff;
-    margin: 0 15px;
+a {
+    color: inherit;
     text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
-    /* Transição suave na cor */
+    transition: var(--transition-fast);
 }
 
-nav a:hover {
-    color: #007bff;
-    /* Cor de destaque no hover */
-    /* Efeito ao passar o mouse */
+a:hover {
+    color: var(--accent-red);
 }
 
-.carrossel {
-    background: #1e1e1e;
-    padding: 40px 0;
-    text-align: center;
+h1, h2, h3, h4, h5, h6, .heading-oswald {
+    font-family: var(--font-heading);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
 }
 
-.carrossel img {
-    max-width: 90%;
-    /* Garante que a imagem não ultrapasse a largura da tela */
-    height: auto;
-    /* Mantém a proporção da imagem */
-    border-radius: 8px;
+/* ==========================================================================
+   Header & Topbar
+   ========================================================================== */
+
+.top-bar {
+    background-color: #1f2937;
+    color: #e5e7eb;
+    font-size: 0.82rem;
+    padding: 6px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.destaques {
-    padding: 40px 20px;
-    text-align: center;
+.top-bar a {
+    color: #e5e7eb;
 }
 
-.servicos-container {
+.top-bar a:hover {
+    color: #ffffff;
+}
+
+.top-bar .social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.15);
+    margin-left: 6px;
+    transition: var(--transition-fast);
+}
+
+.top-bar .social-icons a:hover {
+    background: var(--accent-red);
+    transform: translateY(-2px);
+}
+
+/* Accessibility Dropdown in Top Bar */
+.accessibility-btn {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 0.85rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: var(--radius-sm);
+    transition: var(--transition-fast);
+}
+
+.accessibility-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* Navbar */
+.main-navbar {
+    background: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+    padding: 0.6rem 0;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.navbar-brand img {
+    height: 48px;
+    width: auto;
+    object-fit: contain;
+}
+
+.brand-title {
+    font-family: var(--font-heading);
+    font-size: 1.65rem;
+    font-weight: 700;
+    color: #1a202c;
+    letter-spacing: 0.5px;
+    line-height: 1.1;
+    margin: 0;
+}
+
+.brand-subtitle {
+    font-family: var(--font-body);
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--accent-red);
+    letter-spacing: 1px;
+    display: block;
+}
+
+.nav-link {
+    font-family: var(--font-body);
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: #333333 !important;
+    padding: 8px 14px !important;
+    border-radius: var(--radius-sm);
+    transition: var(--transition-fast);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--accent-red) !important;
+    background-color: rgba(211, 47, 47, 0.06);
+}
+
+.nav-link.active-badge {
+    background-color: #1a1a1a;
+    color: #ffffff !important;
+}
+
+.nav-link.active-badge:hover {
+    background-color: var(--accent-red);
+    color: #ffffff !important;
+}
+
+.dropdown-menu {
+    border: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    border-radius: var(--radius-md);
+    padding: 8px 0;
+    min-width: 220px;
+}
+
+.dropdown-item {
+    font-size: 0.88rem;
+    font-weight: 500;
+    padding: 8px 18px;
+    color: #444;
+    transition: var(--transition-fast);
+}
+
+.dropdown-item:hover {
+    background-color: rgba(211, 47, 47, 0.08);
+    color: var(--accent-red);
+    padding-left: 22px;
+}
+
+/* Search Box */
+.nav-search-btn {
+    border: 1px solid var(--border-color);
+    background: #f8f9fa;
+    color: #555;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: var(--transition-fast);
+}
+
+.nav-search-btn:hover {
+    background: #ffffff;
+    border-color: var(--accent-red);
+    color: var(--accent-red);
+}
+
+/* ==========================================================================
+   Hero Banner / Slider
+   ========================================================================== */
+
+.hero-slider-section {
+    background-color: #0d131f;
+    padding: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.swiper-banner {
+    width: 100%;
+    max-height: 480px;
+    background: #111827;
+}
+
+.swiper-banner .swiper-slide {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    /* Permite que os itens quebrem para a próxima linha */
-    gap: 20px;
-    /* Espaçamento entre os serviços */
+    align-items: center;
+    overflow: hidden;
 }
 
-.servico {
-    width: 300px;
-    background: #1e1e1e;
-    /* Fundo do card */
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    border-top: 4px solid #007bff;
-    /* Borda superior com cor de destaque */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    /* Transição suave */
+.swiper-banner .swiper-slide img {
+    width: 100%;
+    max-height: 480px;
+    object-fit: cover;
+    display: block;
+    transition: transform 6s ease;
 }
 
-.servico:hover {
-    transform: translateY(-10px);
-    /* Efeito de flutuar */
-    box-shadow: 0 8px 16px rgba(0, 123, 255, 0.2);
-    /* Sombra azulada */
+.swiper-banner .swiper-slide:hover img {
+    transform: scale(1.03);
 }
 
-.servico-icone {
-    font-size: 2.5em;
-    /* Aumenta o tamanho do ícone */
-    font-weight: bold;
-    color: #007bff;
-    margin-bottom: 15px;
-}
-
-.sobre,
-.depoimentos {
-    background-color: #181818;
-    padding: 40px 20px;
+.banner-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.4) 70%, transparent 100%);
+    padding: 30px 20px 20px;
+    color: #ffffff;
     text-align: center;
 }
 
-footer {
-    font-size: 0.9em;
+.banner-caption h3 {
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+    color: #ffffff;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.6);
 }
 
-/* Media Query para telas menores (ex: celulares) */
-@media (max-width: 768px) {
-    .servicos-container {
-        flex-direction: column;
-        /* Empilha os serviços verticalmente */
-        align-items: center;
-    }
+/* ==========================================================================
+   Top Feature Pillars (PROJETOS, REDE, APOIO)
+   ========================================================================== */
 
-    .servico {
-        width: 90%;
-        /* Ocupa mais largura da tela */
+.pillar-section {
+    padding: 45px 0 25px;
+    background-color: #ffffff;
+}
+
+.pillar-card {
+    background: #ffffff;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    text-align: center;
+    padding: 20px 15px;
+    transition: var(--transition-normal);
+    display: block;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    height: 100%;
+}
+
+.pillar-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--card-shadow-hover);
+    border-color: rgba(211, 47, 47, 0.25);
+}
+
+.pillar-img-wrap {
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    overflow: hidden;
+    border-radius: var(--radius-sm);
+    background: #fafafa;
+}
+
+.pillar-img-wrap img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    transition: var(--transition-normal);
+}
+
+.pillar-card:hover .pillar-img-wrap img {
+    transform: scale(1.06);
+}
+
+.pillar-title {
+    font-size: 1.45rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 10px;
+    line-height: 1.25;
+    transition: var(--transition-fast);
+}
+
+.pillar-card:hover .pillar-title {
+    color: var(--accent-red);
+}
+
+.pillar-desc {
+    font-size: 0.95rem;
+    color: #4b5563;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Red Divider Line */
+.section-divider-red {
+    border: none;
+    height: 3px;
+    background-color: var(--accent-red);
+    opacity: 0.85;
+    margin: 30px auto;
+    width: 90%;
+    max-width: 1200px;
+}
+
+/* ==========================================================================
+   DESTAQUES Section (6 Gradient Cards)
+   ========================================================================== */
+
+.destaques-section {
+    padding: 35px 0 45px;
+    background-color: #f8fafc;
+}
+
+.destaques-header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.destaques-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #1e293b;
+    letter-spacing: 1px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.destaques-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: var(--accent-red);
+    border-radius: 2px;
+}
+
+.destaque-card {
+    display: block;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    transition: var(--transition-normal);
+    position: relative;
+    background: #ffffff;
+    aspect-ratio: 1 / 1;
+}
+
+.destaque-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: var(--transition-normal);
+}
+
+.destaque-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.18);
+}
+
+.destaque-card:hover img {
+    transform: scale(1.04);
+}
+
+/* ==========================================================================
+   Middle Interactive Section (Matrículas, Professores, Comunidade)
+   ========================================================================== */
+
+.middle-section {
+    padding: 45px 0 55px;
+    background-color: #ffffff;
+}
+
+/* Painel de Matrículas Card */
+.matriculas-panel {
+    background: #2b333e;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.matriculas-header {
+    background: #0066cc;
+    color: #ffffff;
+    padding: 16px 20px;
+    text-align: center;
+}
+
+.matriculas-header i {
+    font-size: 1.5rem;
+    margin-bottom: 6px;
+    display: block;
+}
+
+.matriculas-header h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0;
+    letter-spacing: 0.5px;
+}
+
+.matriculas-nav {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.btn-matricula {
+    background: #3e4753;
+    color: #ffffff !important;
+    font-size: 0.95rem;
+    font-weight: 500;
+    padding: 12px 16px;
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: var(--transition-fast);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.btn-matricula i {
+    font-size: 1.15rem;
+    width: 22px;
+    text-align: center;
+    color: #90caf9;
+}
+
+.btn-matricula:hover {
+    background: #4f5b6b;
+    transform: translateX(4px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-color: #90caf9;
+}
+
+/* Portal Columns (Professores e Comunidade) */
+.portal-col {
+    background: #fafafa;
+    border-radius: var(--radius-md);
+    padding: 25px 20px;
+    border: 1px solid var(--border-color);
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: var(--transition-normal);
+}
+
+.portal-col:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--card-shadow);
+    border-color: #d1d5db;
+}
+
+.portal-illus-wrap {
+    max-width: 260px;
+    width: 100%;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 230px;
+}
+
+.portal-illus-wrap img {
+    max-width: 100%;
+    max-height: 220px;
+    object-fit: contain;
+    transition: var(--transition-normal);
+}
+
+.portal-col:hover .portal-illus-wrap img {
+    transform: scale(1.04);
+}
+
+.portal-links-list {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0 0;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.portal-links-list li {
+    position: relative;
+    padding-left: 24px;
+}
+
+.portal-links-list li::before {
+    content: '■';
+    position: absolute;
+    left: 4px;
+    top: 2px;
+    font-size: 0.75rem;
+    color: var(--accent-red);
+}
+
+.portal-links-list a {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #1e293b;
+    border-bottom: 1.5px solid transparent;
+    transition: var(--transition-fast);
+}
+
+.portal-links-list a:hover {
+    color: var(--accent-red);
+    border-bottom-color: var(--accent-red);
+}
+
+/* ==========================================================================
+   Nossas Redes Sociais Banner
+   ========================================================================== */
+
+.social-banner-section {
+    background: linear-gradient(135deg, #d32f2f 0%, #b71c1c 100%);
+    color: #ffffff;
+    padding: 28px 0;
+    box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.social-banner-title {
+    font-family: var(--font-heading);
+    font-size: 2.3rem;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+.social-banner-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.social-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 54px;
+    height: 54px;
+    border-radius: 12px;
+    background: #ffffff;
+    transition: var(--transition-normal);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    padding: 6px;
+}
+
+.social-btn img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: var(--transition-fast);
+}
+
+.social-btn:hover {
+    transform: translateY(-4px) scale(1.08);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+.site-footer {
+    background-color: var(--bg-footer);
+    color: #2b333e;
+    padding: 45px 0 25px;
+    border-top: 1px solid #ced4da;
+    font-size: 0.95rem;
+}
+
+.footer-col-title {
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 12px;
+    letter-spacing: 0.5px;
+}
+
+.footer-address {
+    line-height: 1.6;
+    color: #374151;
+}
+
+.footer-contacts a {
+    color: #1d4ed8;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.footer-contacts a:hover {
+    color: var(--accent-red);
+    text-decoration: underline;
+}
+
+.footer-logo-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-logo-wrap img {
+    max-height: 90px;
+    width: auto;
+    object-fit: contain;
+    background: #ffffff;
+    padding: 8px 12px;
+    border-radius: var(--radius-sm);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.footer-bottom {
+    margin-top: 35px;
+    padding-top: 20px;
+    border-top: 1px solid #dee2e6;
+    font-size: 0.85rem;
+    color: #6c757d;
+    text-align: center;
+}
+
+/* Floating back to top button */
+.btn-floating-top {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    width: 44px;
+    height: 44px;
+    background: var(--accent-red);
+    color: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+    z-index: 1000;
+    transition: var(--transition-fast);
+    opacity: 0.85;
+}
+
+.btn-floating-top:hover {
+    background: var(--accent-red-hover);
+    color: #ffffff;
+    transform: translateY(-4px);
+    opacity: 1;
+}
+
+/* ==========================================================================
+   Accessibility Modes
+   ========================================================================== */
+
+/* Alto Contraste */
+html.alto-contraste,
+html.alto-contraste body {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+}
+
+html.alto-contraste * {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+    border-color: #ffff00 !important;
+    box-shadow: none !important;
+}
+
+html.alto-contraste a {
+    color: #00ffff !important;
+    text-decoration: underline !important;
+}
+
+html.alto-contraste .top-bar,
+html.alto-contraste .main-navbar,
+html.alto-contraste .pillar-card,
+html.alto-contraste .destaque-card,
+html.alto-contraste .matriculas-panel,
+html.alto-contraste .portal-col,
+html.alto-contraste .social-banner-section,
+html.alto-contraste .site-footer {
+    background-color: #111111 !important;
+    border: 2px solid #ffff00 !important;
+}
+
+html.alto-contraste img {
+    filter: grayscale(100%) contrast(150%);
+}
+
+/* Inverter Cores */
+html.invert-colors {
+    filter: invert(100%) hue-rotate(180deg);
+}
+
+html.invert-colors img,
+html.invert-colors video,
+html.invert-colors iframe {
+    filter: invert(100%) hue-rotate(180deg);
+}
+
+/* ==========================================================================
+   Responsive Breakpoints
+   ========================================================================== */
+
+@media (max-width: 991.98px) {
+    .social-banner-section .row {
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .social-banner-links {
+        justify-content: center;
+    }
+    
+    .brand-title {
+        font-size: 1.35rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .destaques-title {
+        font-size: 1.7rem;
+    }
+    
+    .pillar-card {
+        margin-bottom: 20px;
+    }
+    
+    .portal-col {
+        margin-top: 20px;
+    }
+    
+    .footer-col-title {
+        margin-top: 15px;
     }
 }
